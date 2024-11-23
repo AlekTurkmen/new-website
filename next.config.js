@@ -4,8 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/belvedere-landing',
-  assetPrefix: '/belvedere-landing',
+  basePath: process.env.NODE_ENV === 'production' ? '/belvedere-landing' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/belvedere-landing' : '',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
