@@ -1,10 +1,11 @@
-// ... existing imports and Background component ...
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/ui/Footer';
 
 export default function Home() {
     return (
       <>
-        <div className="relative min-h-screen p-8 text-white font-lexend-regular bg-black">
-          {/* Existing nav section ... */}
+        <div className="relative min-h-screen text-white font-lexend-regular bg-black">
+          <Navbar />
   
           {/* Main Content Area - Updated for Privacy Policy */}
           <main className="max-w-4xl mx-auto py-16">
@@ -209,7 +210,7 @@ export default function Home() {
             </div>
           </main>
   
-          {/* Existing footer section ... */}
+          <Footer />
         </div>
       </>
     );

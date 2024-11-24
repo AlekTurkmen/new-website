@@ -1,7 +1,11 @@
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/ui/Footer';
+
 export default function Home() {
     return (
       <>
-        <div className="relative min-h-screen p-8 text-white font-lexend-regular bg-black">
+        <div className="relative min-h-screen text-white font-lexend-regular bg-black">
+          <Navbar />
           <main className="max-w-4xl mx-auto py-16">
             {/* Center the title and add divider */}
             <div className="text-center mb-12">
@@ -136,6 +140,7 @@ export default function Home() {
               </p>
             </div>
           </main>
+          <Footer />
         </div>
       </>
     );
