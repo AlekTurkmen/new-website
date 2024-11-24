@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/belvedere-landing' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/belvedere-landing' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/relevancy-landing' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/relevancy-landing' : '',
   trailingSlash: true,
 }
 

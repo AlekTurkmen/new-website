@@ -169,6 +169,8 @@ class Scene {
   private clock: THREE.Clock;
   private controls: OrbitControls;
   private mesh: THREE.Mesh;
+  private targetRotation: number = 0;
+  private currentRotation: number = 0;
 
   constructor(container: HTMLElement) {
     // Initialize settings
@@ -199,6 +201,12 @@ class Scene {
     this.scene = new THREE.Scene();
     this.clock = new THREE.Clock();
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    
+    // Disable OrbitControls since we'll control rotation via scroll
+    this.controls.enabled = false;
+    
+    // Add scroll listener
+    window.addEventListener('wheel', this.handleScroll.bind(this));
     
     // Add canvas to container
     container.appendChild(this.renderer.domElement);
@@ -251,11 +259,26 @@ class Scene {
       this.mesh.material.uniforms.uTime.value = this.clock.getElapsedTime();
     }
 
+    // Smooth rotation interpolation
+    this.currentRotation += (this.targetRotation - this.currentRotation) * 0.1;
+    
+    // Apply rotation to the mesh
+    if (this.mesh) {
+      this.mesh.rotation.y = this.currentRotation;
+    }
+
     this.renderer.render(this.scene, this.camera);
+  }
+
+  private handleScroll(event: WheelEvent) {
+    // Reduced from 0.001 to 0.0005 (half as sensitive)
+    const scrollSensitivity = 0.0004;
+    this.targetRotation += event.deltaY * scrollSensitivity;
   }
 
   public dispose() {
     window.removeEventListener('resize', this.resize.bind(this));
+    window.removeEventListener('wheel', this.handleScroll.bind(this));
     this.renderer.dispose();
     this.scene.clear();
   }
