@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lexend', sans-serif;
 }
 
 @layer base {
@@ -83,6 +83,9 @@ body {
     @apply border-border;
   }
   body {
+    :root {
+      --font-sans: var(--font-lexend-regular);
+    }
     @apply bg-background text-foreground;
   }
 }
