@@ -17,7 +17,32 @@ export const metadata: Metadata = {
   title: "RELEVANCY AI",
   description: "Create your own nepotism.",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      {
+        url: '/favicon/favicon.ico',
+      },
+      {
+        url: '/favicon/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+      {
+        url: '/favicon/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+    ],
+    apple: {
+      url: '/favicon/apple-touch-icon.png',
+      sizes: '180x180',
+      type: 'image/png',
+    },
+    other: [
+      {
+        rel: 'manifest',
+        url: '/favicon/site.webmanifest',
+      },
+    ],
   },
 };
 
