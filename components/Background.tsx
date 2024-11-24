@@ -1,13 +1,11 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as dat from 'dat.gui';
+import { useRouter } from 'next/navigation';
 
 // Define the shader code constants
-const noise = `/* ... paste the noise shader code here ... */`;
-const rotation = `/* ... paste the rotation shader code here ... */`;
 const vertexShader = `
   varying vec2 vUv;
   varying float vDistort;
@@ -171,25 +169,25 @@ class Scene {
   private mesh: THREE.Mesh;
   private targetRotation: number = 0;
   private currentRotation: number = 0;
+  private animationFrameId: number | null = null;
+  private isAnimating: boolean = false;
 
   constructor(container: HTMLElement) {
-    // Initialize settings
-    const settings = {
-      speed: 0.2,
-      density: 1.5,
-      strength: 0.2,
-      frequency: 3.0,
-      amplitude: 6.0,
-      intensity: 7.0,
-    };
-
-    // Initialize renderer
-    this.renderer = new THREE.WebGLRenderer({ antialias: true });
+    // Initialize core components
+    this.renderer = new THREE.WebGLRenderer({ 
+      antialias: true,
+      alpha: true 
+    });
+    this.scene = new THREE.Scene();
+    this.clock = new THREE.Clock();
+    
+    // Setup renderer
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.setClearColor('black', 1);
-    
-    // Initialize camera
+    container.appendChild(this.renderer.domElement);
+
+    // Setup camera
     this.camera = new THREE.PerspectiveCamera(
       45,
       window.innerWidth / window.innerHeight,
@@ -197,107 +195,156 @@ class Scene {
       1000
     );
     this.camera.position.set(0, 0, 4);
-    
-    this.scene = new THREE.Scene();
-    this.clock = new THREE.Clock();
+
+    // Setup controls
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-    
-    // Disable OrbitControls since we'll control rotation via scroll
     this.controls.enabled = false;
-    
-    // Add scroll listener
-    window.addEventListener('wheel', this.handleScroll.bind(this));
-    
-    // Add canvas to container
-    container.appendChild(this.renderer.domElement);
-    
-    // Add mesh
+
+    // Create mesh
     const geometry = new THREE.IcosahedronGeometry(1, 64);
     const material = new THREE.ShaderMaterial({
       vertexShader,
       fragmentShader,
       uniforms: {
         uTime: { value: 0 },
-        uSpeed: { value: settings.speed },
-        uNoiseDensity: { value: settings.density },
-        uNoiseStrength: { value: settings.strength },
-        uFrequency: { value: settings.frequency },
-        uAmplitude: { value: settings.amplitude },
-        uIntensity: { value: settings.intensity },
+        uSpeed: { value: 0.2 },
+        uNoiseDensity: { value: 1.5 },
+        uNoiseStrength: { value: 0.2 },
+        uFrequency: { value: 3.0 },
+        uAmplitude: { value: 6.0 },
+        uIntensity: { value: 7.0 },
       },
     });
-    
+
     this.mesh = new THREE.Mesh(geometry, material);
     this.scene.add(this.mesh);
-    
-    // Add event listeners
-    window.addEventListener('resize', this.resize.bind(this));
-    
-    // Start animation
+
+    // Start animation at the end of constructor
+    this.isAnimating = true;
     this.animate();
   }
 
-  private resize() {
+  private bindEvents(): void {
+    window.addEventListener('resize', this.handleResize);
+    window.addEventListener('wheel', this.handleScroll);
+  }
+
+  private handleResize = (): void => {
     const width = window.innerWidth;
     const height = window.innerHeight;
 
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(width, height);
-  }
+  };
 
-  private animate() {
-    requestAnimationFrame(this.animate.bind(this));
-    this.render();
-  }
+  private handleScroll = (event: WheelEvent): void => {
+    const scrollSensitivity = 0.0004;
+    this.targetRotation += event.deltaY * scrollSensitivity;
+  };
 
-  private render() {
+  private animate = (): void => {
+    if (!this.isAnimating) return;
+    
+    this.animationFrameId = requestAnimationFrame(this.animate);
+    
+    // Update controls
     this.controls.update();
     
-    // Update uniforms
+    // Update shader uniforms
     if (this.mesh.material instanceof THREE.ShaderMaterial) {
       this.mesh.material.uniforms.uTime.value = this.clock.getElapsedTime();
     }
 
-    // Smooth rotation interpolation
+    // Update rotation
     this.currentRotation += (this.targetRotation - this.currentRotation) * 0.1;
-    
-    // Apply rotation to the mesh
-    if (this.mesh) {
-      this.mesh.rotation.y = this.currentRotation;
+    this.mesh.rotation.y = this.currentRotation;
+
+    // Render
+    this.renderer.render(this.scene, this.camera);
+  };
+
+  public dispose(): void {
+    if (this.animationFrameId !== null) {
+      cancelAnimationFrame(this.animationFrameId);
     }
 
-    this.renderer.render(this.scene, this.camera);
-  }
+    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('wheel', this.handleScroll);
 
-  private handleScroll(event: WheelEvent) {
-    // Reduced from 0.001 to 0.0005 (half as sensitive)
-    const scrollSensitivity = 0.0004;
-    this.targetRotation += event.deltaY * scrollSensitivity;
-  }
-
-  public dispose() {
-    window.removeEventListener('resize', this.resize.bind(this));
-    window.removeEventListener('wheel', this.handleScroll.bind(this));
+    this.mesh.geometry.dispose();
+    (this.mesh.material as THREE.Material).dispose();
     this.renderer.dispose();
     this.scene.clear();
+  }
+
+  public startAnimation(): void {
+    if (!this.isAnimating) {
+      this.isAnimating = true;
+      this.animate();
+    }
+  }
+
+  public stopAnimation(): void {
+    this.isAnimating = false;
+    if (this.animationFrameId !== null) {
+      cancelAnimationFrame(this.animationFrameId);
+      this.animationFrameId = null;
+    }
   }
 }
 
 export default function Background() {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<Scene | null>(null);
+  const [isInitialized, setIsInitialized] = useState(false);
+  const router = useRouter();
 
+  const initScene = () => {
+    if (!containerRef.current || sceneRef.current) return;
+
+    try {
+      sceneRef.current = new Scene(containerRef.current);
+      setIsInitialized(true);
+    } catch (error) {
+      console.error('Failed to initialize scene:', error);
+      setIsInitialized(false);
+    }
+  };
+
+  // Initialize on mount
   useEffect(() => {
-    if (!containerRef.current) return;
+    initScene();
 
-    // Initialize scene
-    sceneRef.current = new Scene(containerRef.current);
+    // Add navigation event listeners
+    const handleStart = () => {
+      if (sceneRef.current) {
+        sceneRef.current.stopAnimation();
+      }
+    };
 
-    // Cleanup
+    const handleComplete = () => {
+      if (sceneRef.current) {
+        sceneRef.current.startAnimation();
+      }
+    };
+
+    // Listen for Next.js route events
+    window.addEventListener('beforeunload', handleStart);
+    window.addEventListener('routeChangeStart', handleStart);
+    window.addEventListener('routeChangeComplete', handleComplete);
+    window.addEventListener('focus', handleComplete);
+    
     return () => {
+      window.removeEventListener('beforeunload', handleStart);
+      window.removeEventListener('routeChangeStart', handleStart);
+      window.removeEventListener('routeChangeComplete', handleComplete);
+      window.removeEventListener('focus', handleComplete);
+      
       if (sceneRef.current) {
         sceneRef.current.dispose();
+        sceneRef.current = null;
+        setIsInitialized(false);
       }
     };
   }, []);
@@ -306,6 +353,7 @@ export default function Background() {
     <div 
       ref={containerRef} 
       className="fixed top-0 left-0 w-full h-full -z-10"
+      aria-hidden="true"
     />
   );
 }

@@ -5,8 +5,9 @@ import Footer from '@/components/ui/Footer';
 export default function Home() {
   return (
     <>
-      <Background />
       <div className="relative min-h-screen text-white font-lexend-regular">
+        <Background />
+
         <Navbar />
         
         {/* Main Content Area */}
