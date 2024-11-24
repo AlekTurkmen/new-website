@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "BELVEDERE",
-  description: "Our Landing Page",
+  title: "RELEVANCY AI",
+  description: "Create your own nepotism.",
 };
 
 export default function RootLayout({

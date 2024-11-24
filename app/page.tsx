@@ -13,7 +13,7 @@ export default function Home() {
             href="/" 
             className="text-2xl font-semibold hover:opacity-80 transition-opacity"
           >
-            BELVEDERE
+            RELEVANCY AI
           </Link>
 
           {/* Navigation Links */}
@@ -61,10 +61,10 @@ export default function Home() {
                 href="mailto:founders@belvedere.ai"
                 className="hover:opacity-80 transition-opacity"
               >
-                founders@belvedere.ai
+                founders@relevancy.ai
               </a>
               <a 
-                href="https://twitter.com/belvedere" 
+                href="https://twitter.com/relevancy" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
@@ -72,7 +72,7 @@ export default function Home() {
                 X/Twitter
               </a>
               <a 
-                href="https://linkedin.com/company/belvedere" 
+                href="https://linkedin.com/company/relevancy" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
@@ -84,7 +84,7 @@ export default function Home() {
             {/* Legal Links */}
             <div className="flex gap-6">
               <span className="hover:opacity-80 transition-opacity">
-                © Belvedere
+                © Relevancy AI
               </span>
               <Link 
                 href="/privacy" 
