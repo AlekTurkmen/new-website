@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+const pathPrefix = isDevelopment ? '' : '.';
+
 const lexendRegular = localFont({
   src: './fonts/Lexend-Regular.ttf',
   variable: '--font-lexend-regular',
@@ -19,30 +22,30 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: './favicon/favicon.ico',
+        url: `${pathPrefix}/favicon/favicon.ico`,
         sizes: 'any',
       },
       {
-        url: './favicon/favicon-16x16.png',
+        url: `${pathPrefix}/favicon/favicon-16x16.png`,
         sizes: '16x16',
         type: 'image/png',
       },
       {
-        url: './favicon/favicon-32x32.png',
+        url: `${pathPrefix}/favicon/favicon-32x32.png`,
         sizes: '32x32',
         type: 'image/png',
       },
     ],
-    shortcut: [{ url: './favicon/favicon.ico' }],
+    shortcut: [{ url: `${pathPrefix}/favicon/favicon.ico` }],
     apple: {
-      url: './favicon/apple-touch-icon.png',
+      url: `${pathPrefix}/favicon/apple-touch-icon.png`,
       sizes: '180x180',
       type: 'image/png',
     },
     other: [
       {
         rel: 'manifest',
-        url: './favicon/site.webmanifest',
+        url: `${pathPrefix}/favicon/site.webmanifest`,
       },
     ],
   },

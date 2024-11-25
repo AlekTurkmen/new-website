@@ -15,7 +15,7 @@ export default function Home() {
                 Privacy Policy
               </h1>
               
-              <p className="text-sm text-gray-400 mb-6 font-lexend-regular">
+              <p className="text-md text-gray-400 mb-6 font-lexend-regular">
                 Last updated: November 24, 2024
               </p>
 
