@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stripe Payment Test</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="/config.js" defer></script>
+  <style>
+    .error-message {
+      color: red;
+      display: none;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Payment</h1>
+  <button id="checkout-button">Pay $5.00</button>
+  <div id="error-message" class="error-message">
+    It seems you have an ad blocker enabled. Please disable it for this site to process payments.
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const checkoutButton = document.getElementById('checkout-button');
+      const errorMessage = document.getElementById('error-message');
+      
+      // Test if Stripe is blocked
+      try {
+        const stripe = Stripe(window.config.stripe_key);
+        
+        checkoutButton.addEventListener('click', async () => {
+          try {
+            checkoutButton.disabled = true;
+            
+            const response = await fetch('/create-checkout-session', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              }
+            });
+            
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const session = await response.json();
+            
+            if (session.error) {
+              throw new Error(session.error);
+            }
+
+            const result = await stripe.redirectToCheckout({
+              sessionId: session.id
+            });
+
+            if (result.error) {
+              throw new Error(result.error.message);
+            }
+          } catch (error) {
+            console.error('Payment Error:', error);
+            errorMessage.textContent = 'Payment failed. Please try again or disable your ad blocker.';
+            errorMessage.style.display = 'block';
+            checkoutButton.disabled = false;
+          }
+        });
+      } catch (error) {
+        console.error('Stripe Load Error:', error);
+        errorMessage.textContent = 'Please disable your ad blocker to process payments.';
+        errorMessage.style.display = 'block';
+        checkoutButton.disabled = true;
+      }
+    });
+  </script>
+</body>
+</html>
