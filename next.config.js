@@ -7,6 +7,7 @@ const nextConfig = {
   basePath: process.env.NODE_ENV === 'production' ? '/relevancy-landing' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/relevancy-landing' : '',
   trailingSlash: true,
+  reactStrictMode: true,
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
