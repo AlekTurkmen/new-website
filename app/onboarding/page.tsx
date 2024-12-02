@@ -12,25 +12,8 @@ import {
 import { Input } from "@/components/ui/shadcn/input"
 import { Label } from "@/components/ui/shadcn/label"
 import { Progress } from "@/components/ui/shadcn/progress"
-import { initiateCheckout } from '@/services/stripe';
 
 export default function TabsDemo() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-
-  const handlePayment = async () => {
-    try {
-      setIsLoading(true);
-      setError('');
-      await initiateCheckout();
-    } catch (error) {
-      console.error('Payment failed:', error);
-      setError('Payment initialization failed. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   return (
     <div className="min-h-screen w-full bg-black flex items-center justify-center px-4">
         <Card className="w-[30%]">
@@ -56,15 +39,6 @@ export default function TabsDemo() {
                 <Input id="idealCity" defaultValue="" />
                 </div>
             </CardContent>
-            <CardFooter className="flex flex-col gap-4">
-                {error && <div className="text-red-500 text-sm">{error}</div>}
-                <Button 
-                  onClick={handlePayment} 
-                  disabled={isLoading}
-                >
-                  {isLoading ? 'Processing...' : 'Save & Continue →'}
-                </Button>
-            </CardFooter>
         </Card>
     </div>
   )
