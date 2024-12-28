@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { RainbowButton } from '@/components/magicui/rainbow-button';
 
 export default function Footer() {
   return (
@@ -9,28 +10,11 @@ export default function Footer() {
         <div className="flex justify-between items-center font-lexend-regular">
           {/* Social Links */}
           <div className="flex gap-6">
-            {/* <a 
-              href="mailto:aleknturkmen@gmail.com"
-              className="hover:opacity-80 transition-opacity"
-            >
-              aleknturkmen@gmail.com
-            </a>
-            <a 
-              href="https://twitter.com/alekturkmen" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              X/Twitter
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/alekturkmen/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              LinkedIn
-            </a> */}
+          <Link href="/#">
+          <RainbowButton>
+            
+          </RainbowButton>
+        </Link>
           </div>
 
           {/* Legal Links */}

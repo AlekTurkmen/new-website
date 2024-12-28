@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link";
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 export default function Navbar() {
   return (
@@ -14,8 +15,8 @@ export default function Navbar() {
       </Link>
 
       {/* Navigation Links */}
-      <div className="flex items-center gap-8 font-lexend-regular">
-      <Link 
+      <div className="flex flex-col md:flex-row items-end md:items-center gap-4 md:gap-8 font-lexend-regular">
+        <Link 
           href="/projects" 
           className="hover:opacity-80 transition-opacity"
         >
@@ -35,7 +36,7 @@ export default function Navbar() {
         </Link>
         <Link 
           href="/socials" 
-          className="px-6 py-2 rounded-full bg-white text-black hover:bg-opacity-90 transition-colors font-lexend-regular"
+          className="hover:opacity-80 transition-opacity"
         >
           SOCIALS
         </Link>
