@@ -17,8 +17,8 @@ const lexendBold = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "RELEVANCY AI",
-  description: "Create your own nepotism.",
+  title: "ALEK TURKMEN",
+  description: "Founder | Engineer @ Cooper Union",
   icons: {
     icon: [
       {
