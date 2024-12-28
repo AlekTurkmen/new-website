@@ -21,13 +21,40 @@ export default function Home() {
 
           {/* Social Icons Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            {/* Notion */}
-            <a href="https://www.notion.so/alekturkmen/100-10-Days-Alek-Turkmen-1360c1259cce80aa95ebd4dabd8c379f" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity">
+
+                        {/* Notion */}
+                        <a href="https://www.notion.so/alekturkmen/100-10-Days-Alek-Turkmen-1360c1259cce80aa95ebd4dabd8c379f" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity">
               <svg className="w-16 h-16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-2.986-4.577c-.513-.84-.653-1.354-.653-2.055V3.23c0-.839.374-1.54 1.167-1.68z"/>
               </svg>
             </a>
 
+            {/* X (Twitter) */}
+            <a href="https://x.com/AlekTurkmen" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity">
+              <svg className="w-16 h-16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+            {/* GitHub */}
+            <a href="https://github.com/AlekTurkmen" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity text-[#1]">
+              <svg className="w-16 h-16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </a>
+
+            {/* Substack */}
+            <a 
+              href="https://alekturkmen.substack.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity"
+            >
+              <svg className="w-16 h-16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+              </svg>
+            </a>
+            
             {/* YouTube */}
             <a href="https://www.youtube.com/@alekturkmen" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity">
               <div className="relative">
@@ -52,39 +79,6 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Instagram */}
-            <a href="#" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity">
-              <svg className="w-16 h-16" viewBox="0 0 551.034 551.034" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="instagram-gradient" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.5714" x2="275.517" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
-                    <stop offset="0" style={{ stopColor: '#E09B3D' }}></stop>
-                    <stop offset="0.3" style={{ stopColor: '#C74C4D' }}></stop>
-                    <stop offset="0.6" style={{ stopColor: '#C21975' }}></stop>
-                    <stop offset="1" style={{ stopColor: '#7024C4' }}></stop>
-                  </linearGradient>
-                </defs>
-                <g>
-                  <path style={{ fill: 'url(#instagram-gradient)' }} d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722 c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156 C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156 c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722 c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"/>
-                  <path style={{ fill: 'url(#instagram-gradient)' }} d="M275.517,133C196.933,133,133,196.933,133,275.516 s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6 c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083 C362.6,323.611,323.611,362.6,275.517,362.6z"/>
-                  <circle style={{ fill: 'url(#instagram-gradient)' }} cx="418.306" cy="134.072" r="34.149"/>
-                </g>
-              </svg>
-            </a>
-
-            {/* X (Twitter) */}
-            <a href="https://x.com/AlekTurkmen" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity">
-              <svg className="w-16 h-16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-
-            {/* GitHub */}
-            <a href="https://github.com/AlekTurkmen" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity text-[#1]">
-              <svg className="w-16 h-16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-              </svg>
-            </a>
-
             {/* Gmail */}
             <a 
               href="https://mail.google.com/mail/?view=cm&fs=1&to=aleknturkmen@gmail.com&su=Found%20you%20through%20your%20website!&body=%5BTell%20me%20about%20yourself%20here%5D" 
@@ -100,15 +94,22 @@ export default function Home() {
               </svg>
             </a>
 
-            {/* Substack */}
-            <a 
-              href="https://alekturkmen.substack.com/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity"
-            >
-              <svg className="w-16 h-16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+            {/* Instagram */}
+            <a href="https://www.instagram.com/alekturkmen/" target="_blank" className="aspect-square flex items-center justify-center hover:opacity-75 transition-opacity">
+              <svg className="w-16 h-16" viewBox="0 0 551.034 551.034" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="instagram-gradient" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.5714" x2="275.517" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
+                    <stop offset="0" style={{ stopColor: '#E09B3D' }}></stop>
+                    <stop offset="0.3" style={{ stopColor: '#C74C4D' }}></stop>
+                    <stop offset="0.6" style={{ stopColor: '#C21975' }}></stop>
+                    <stop offset="1" style={{ stopColor: '#7024C4' }}></stop>
+                  </linearGradient>
+                </defs>
+                <g>
+                  <path style={{ fill: 'url(#instagram-gradient)' }} d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722 c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156 C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156 c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722 c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"/>
+                  <path style={{ fill: 'url(#instagram-gradient)' }} d="M275.517,133C196.933,133,133,196.933,133,275.516 s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6 c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083 C362.6,323.611,323.611,362.6,275.517,362.6z"/>
+                  <circle style={{ fill: 'url(#instagram-gradient)' }} cx="418.306" cy="134.072" r="34.149"/>
+                </g>
               </svg>
             </a>
           </div>
