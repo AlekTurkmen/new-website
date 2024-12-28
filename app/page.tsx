@@ -12,7 +12,7 @@ export default function Home() {
         {/* Main Content Area - changed to use flex-grow */}
         <main className="flex-grow flex items-center justify-center">
           <h1 className="text-[7rem] font-lexend-bold max-w-[1600px] leading-tight">
-            Create your own nepotism.
+            Alek Turkmen
           </h1>
         </main>
 

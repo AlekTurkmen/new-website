@@ -135,19 +135,27 @@ export const fragmentShader = `
   uniform float uTime;
   uniform float uIntensity;
   
-  vec3 cosPalette(float t, vec3 a, vec3 b, vec3 c, vec3 d) {
-    return a + b * cos(6.28318 * (c * t + d));
-  }     
-  
   void main() {
     float distort = vDistort * uIntensity;
     
-    vec3 brightness = vec3(0.5, 0.5, 0.5);
-    vec3 contrast = vec3(0.5, 0.5, 0.5);
-    vec3 oscilation = vec3(1.0, 1.0, 1.0);
-    vec3 phase = vec3(0.0, 0.1, 0.2);
-  
-    vec3 color = cosPalette(distort, brightness, contrast, oscilation, phase);
+    // Create three distinct regions using sine waves
+    float t = distort * 2.0;
+    float pattern = sin(t) + sin(t * 2.0);
+    
+    // Define our three colors
+    vec3 black = vec3(0.0, 0.0, 0.0);
+    vec3 white = vec3(1.0, 1.0, 1.0);
+    vec3 red = vec3(1.0, 0.0, 0.0);
+    
+    // Create sharp transitions between colors
+    vec3 color;
+    if (pattern < -0.5) {
+        color = black;
+    } else if (pattern < 0.5) {
+        color = red;
+    } else {
+        color = white;
+    }
     
     gl_FragColor = vec4(color, 1.0);
   }
