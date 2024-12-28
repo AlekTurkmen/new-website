@@ -6,7 +6,6 @@ import { RainbowButton } from "@/components/magicui/rainbow-button";
 export default function Navbar() {
   return (
     <nav className="flex justify-between items-center p-8">
-      {/* Logo/Brand */}
       <Link 
         href="/" 
         className="text-2xl font-lexend-bold hover:opacity-80 transition-opacity"
@@ -16,11 +15,11 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <div className="flex items-center gap-4 md:gap-8 font-lexend-regular">
-        <Link 
-          href="/projects" 
+      <Link 
+          href="/startups" 
           className="hover:opacity-80 transition-opacity"
         >
-          PROJECTS
+          STARTUPS
         </Link>
         <Link 
           href="/blogs" 
@@ -29,10 +28,10 @@ export default function Navbar() {
           BLOGS
         </Link>
         <Link 
-          href="/experiences" 
+          href="/projects" 
           className="hover:opacity-80 transition-opacity"
         >
-          EXPERIENCES
+          PROJECTS
         </Link>
         <Link 
           href="/socials" 
