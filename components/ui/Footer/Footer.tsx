@@ -5,15 +5,15 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="mt-auto">
-      <div className="p-8">
+      <div className="p-4">
         <div className="flex justify-between items-center font-lexend-regular">
           {/* Social Links */}
           <div className="flex gap-6">
-            <a 
-              href="mailto:founders@relevancy.ai"
+            {/* <a 
+              href="mailto:aleknturkmen@gmail.com"
               className="hover:opacity-80 transition-opacity"
             >
-              founders@relevancy.ai
+              aleknturkmen@gmail.com
             </a>
             <a 
               href="https://twitter.com/alekturkmen" 
@@ -30,15 +30,15 @@ export default function Footer() {
               className="hover:opacity-80 transition-opacity"
             >
               LinkedIn
-            </a>
+            </a> */}
           </div>
 
           {/* Legal Links */}
           <div className="flex gap-6">
             <span className="hover:opacity-80 transition-opacity">
-              © Relevancy AI
+              © Alek Turkmen
             </span>
-            <Link 
+            {/* <Link 
               href="/privacy" 
               className="hover:opacity-80 transition-opacity"
             >
@@ -49,7 +49,7 @@ export default function Footer() {
               className="hover:opacity-80 transition-opacity"
             >
               Terms
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

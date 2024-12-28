@@ -10,34 +10,34 @@ export default function Navbar() {
         href="/" 
         className="text-2xl font-lexend-bold hover:opacity-80 transition-opacity"
       >
-        RELEVANCY AI
+        ALEK TURKMEN
       </Link>
 
       {/* Navigation Links */}
       <div className="flex items-center gap-8 font-lexend-regular">
-        <Link 
-          href="/blog" 
+      <Link 
+          href="/projects" 
           className="hover:opacity-80 transition-opacity"
         >
-          BLOG
+          PROJECTS
         </Link>
         <Link 
-          href="/careers" 
+          href="/blogs" 
           className="hover:opacity-80 transition-opacity"
         >
-          CAREERS
+          BLOGS
         </Link>
         <Link 
-          href="/faq" 
+          href="/experience" 
           className="hover:opacity-80 transition-opacity"
         >
-          FAQ
+          EXPERIENCE
         </Link>
         <Link 
-          href="/try" 
+          href="/socials" 
           className="px-6 py-2 rounded-full bg-white text-black hover:bg-opacity-90 transition-colors font-lexend-regular"
         >
-          BE THE FIRST
+          SOCIALS
         </Link>
       </div>
     </nav>
