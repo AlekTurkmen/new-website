@@ -11,8 +11,8 @@ export default function Home() {
         
         {/* Main Content Area - changed to use flex-grow */}
         <main className="flex-grow flex items-center justify-center">
-          <h1 className="text-[8rem] font-lexend-bold max-w-[1600px] leading-tight">
-            Alek Turkmen
+          <h1 className="text-5xl sm:text-6xl md:text-[8rem] font-lexend-bold max-w-[1600px] leading-tight">
+            ALEK TURKMEN
           </h1>
         </main>
 
