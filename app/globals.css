@@ -1,5 +1,12 @@
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+
+/* postcss-disable-next-line */
 @tailwind base;
+/* postcss-disable-next-line */
 @tailwind components;
+/* postcss-disable-next-line */
 @tailwind utilities;
 
 body {
