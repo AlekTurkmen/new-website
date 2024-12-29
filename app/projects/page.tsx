@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
-import NumberTicker from "@/components/magicui/number-ticker";
 import { useTheme } from "next-themes";
 import { MagicCard } from "@/components/magicui/magic-card";
 
@@ -61,10 +60,7 @@ export default function Home() {
         <main className="max-w-4xl mx-auto py-16">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4">
-              <p className="text-5xl sm:text-6xl font-lexend-bold">
-                <NumberTicker value={100} />
-              </p>
-              <h1 className="text-5xl sm:text-6xl text-white font-lexend-bold">
+              <h1 className="text-5xl sm:text-6xl font-lexend-bold text-purple-400 drop-shadow-[0_0_15px_rgba(192,132,252,0.9)] drop-shadow-[0_0_30px_rgba(192,132,252,0.6)]">
                 PROJECTS
               </h1>
             </div>

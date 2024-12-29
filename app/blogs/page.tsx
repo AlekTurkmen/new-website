@@ -26,7 +26,7 @@ export default function Home() {
     },
     {
       title: "My First Blog",
-      slug: "example-blog"
+      slug: "first"
     }
   ];
 
@@ -37,7 +37,7 @@ export default function Home() {
         
         <main className="max-w-4xl mx-auto py-16 px-4">
           <div className="text-center mb-12">
-            <h1 className="text-5xl sm:text-6xl text-white font-lexend-bold mb-4">
+            <h1 className="text-5xl sm:text-6xl font-lexend-bold text-green-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.9)] drop-shadow-[0_0_30px_rgba(74,222,128,0.6)] mb-4">
               BLOGS
             </h1>
             <div className="w-full h-[1px] bg-gray-800 mt-8"></div>
