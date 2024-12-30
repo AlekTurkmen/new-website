@@ -73,7 +73,7 @@ export default function Home() {
                 </p>
 
                 <h3 className="text-xl font-lexend-bold mb-4">
-                  Why I beleive in myself
+                  Why I believe in myself
                 </h3>
 
                 <p className="text-gray-300">
