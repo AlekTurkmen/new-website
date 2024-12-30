@@ -6,23 +6,23 @@ export default function Home() {
   const blogs = [
     {
       title: "My First Startup Failed",
-      slug: "example-blog"
+      slug: "blank"
     },
     {
       title: "The Answer To The Universe",
-      slug: "example-blog"
+      slug: "blank"
     },
     {
       title: "The Perfect Day",
-      slug: "example-blog"
+      slug: "blank"
     },
     {
       title: "Being In A Frat",
-      slug: "example-blog"
+      slug: "blank"
     },
     {
       title: "Personality Tests",
-      slug: "example-blog"
+      slug: "personality"
     },
     {
       title: "My First Blog",

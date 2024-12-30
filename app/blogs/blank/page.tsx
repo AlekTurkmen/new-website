@@ -2,6 +2,7 @@
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
 import ScrollProgress from "@/components/magicui/scroll-progress";
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -48,6 +49,53 @@ export default function Home() {
                 <p className="text-gray-300">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <span className="text-red-500 font-bold">[1]</span>
                 </p>
+
+                {/* Single featured image with rounded corners */}
+                <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/example-featured.webp"
+                    alt="Featured image description"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+
+                {/* 2x2 Image Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/images/grid-1.webp"
+                      alt="Grid image 1"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/images/grid-2.webp"
+                      alt="Grid image 2"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/images/grid-3.webp"
+                      alt="Grid image 3"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/images/grid-4.webp"
+                      alt="Grid image 4"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
 
               </div>
             </main>
