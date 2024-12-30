@@ -55,7 +55,7 @@ export default function Home() {
                 STARTUPS
               </h1>
             </div>
-            <p className="text-md text-gray-400"></p>
+            <p className="text-md text-gray-400">Page coming soon.</p>
             <div className="w-full h-[1px] bg-gray-800 mt-8"></div>
           </div>
           
