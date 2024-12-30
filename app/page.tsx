@@ -9,7 +9,7 @@ export default function Home() {
         <ShaderSphere />
         <Navbar />
         
-        {/* Main Content Area - changed to use flex-grow */}
+        {/* Main Content Area */}
         <main className="flex-grow flex items-center justify-center">
           <h1 className="text-5xl sm:text-6xl md:text-[8rem] font-lexend-bold max-w-[1600px] leading-tight">
             ALEK TURKMEN
