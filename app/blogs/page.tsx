@@ -5,20 +5,24 @@ import Link from 'next/link';
 export default function Home() {
   const blogs = [
     {
+      title: "For Parents",
+      slug: "parents"
+    },
+    {
       title: "My First Startup Failed",
-      slug: "blank"
+      slug: "first-fail"
     },
     {
       title: "The Answer To The Universe",
-      slug: "blank"
+      slug: "universe"
     },
     {
       title: "The Perfect Day",
-      slug: "blank"
+      slug: "perfect"
     },
     {
       title: "Being In A Frat",
-      slug: "blank"
+      slug: "frat"
     },
     {
       title: "Personality Tests",

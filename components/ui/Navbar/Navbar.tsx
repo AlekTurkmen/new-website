@@ -7,7 +7,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-between items-center p-8">
+    <nav className="sticky top-0 z-50 flex justify-between items-center p-8 bg-black/50 backdrop-blur-sm">
       <Link 
         href="/" 
         className={`text-2xl font-lexend-bold transition-all duration-200

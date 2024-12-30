@@ -38,10 +38,8 @@ export default function Home() {
               {/* Main content */}
               <div className="space-y-8 font-lexend-regular">
                 <p className="text-gray-300">
-                  Just a quick tracker of my personality tests I've taken over the years.
-                </p>
-                <p className="text-gray-300">
-                  Updating indefinitely. I used this{' '}
+                  Tracking my personality as it changes over the years.
+                  Updating indefinitely. Using this{' '}
                   <a 
                     href="https://www.16personalities.com/free-personality-test" 
                     target="_blank" 
@@ -54,7 +52,7 @@ export default function Home() {
 
                 {/* October 2024 */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-lexend-bold">October 26 2024</h3>
+                  <h3 className="text-2xl font-lexend-bold">October 2024</h3>
                   <p className="text-xl text-gray-300">Architect</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="relative aspect-square rounded-lg overflow-hidden">
@@ -80,7 +78,7 @@ export default function Home() {
 
                 {/* September 2023 */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-lexend-bold">September 20 2023</h3>
+                  <h3 className="text-2xl font-lexend-bold">September 2023</h3>
                   <p className="text-xl text-gray-300">Commander</p>
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
@@ -96,7 +94,7 @@ export default function Home() {
 
                 {/* April 2021 */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-lexend-bold">April 12 2021</h3>
+                  <h3 className="text-2xl font-lexend-bold">April 2021</h3>
                   <p className="text-xl text-gray-300">Entrepreneur</p>
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
@@ -112,7 +110,7 @@ export default function Home() {
 
                 {/* May 2020 */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-lexend-bold">May 2nd 2020</h3>
+                  <h3 className="text-2xl font-lexend-bold">May 2020</h3>
                   <p className="text-xl text-gray-300">Logician</p>
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
