@@ -4,6 +4,8 @@ import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
 import { useTheme } from "next-themes";
 import { MagicCard } from "@/components/magicui/magic-card";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const [isLinkFocused, setIsLinkFocused] = useState(false);
@@ -13,42 +15,62 @@ export default function Home() {
     {
       title: "Queens Sculpture",
       description: "NYC Parks sculpture unveiling Spring 2025.",
+      image: "/images/projects/queens/thumbnail.webp",
+      link: "/projects/queens"
     },
     {
       title: "Heat Pump Rig",
-      description: "Description",
+      description: "Using flammable explosives to move thermal energy",
+      image: "/images/projects/heatpump/thumbnail.webp",
+      link: "/projects/heatpump"
     },
     {
       title: "Mechatronics Robot",
       description: "Description",
+      image: "/images/projects/robot/thumbnail.webp",
+      link: "/projects/robot"
     },
     {
       title: "LED Name Plate",
       description: "Description",
+      image: "/images/projects/led/thumbnail.webp",
+      link: "/projects/led"
     },
     {
       title: "Patio Retrofit",
       description: "Description",
+      image: "/images/projects/patio/thumbnail.webp",
+      link: "/projects/patio"
     },
     {
       title: "Fashion Toolbox",
       description: "Description",
+      image: "/images/projects/fashion/thumbnail.webp",
+      link: "/projects/fashion"
     },
     {
       title: "Flag Frenzy",
       description: "Description",
+      image: "/images/projects/flag/thumbnail.webp",
+      link: "/projects/flag"
     },
     {
       title: "Restoring 1989 BMW",
       description: "Description",
+      image: "/images/projects/bmw/thumbnail.webp",
+      link: "/projects/bmw"
     },
     {
       title: "Retired Esports Pro",
       description: "Description",
+      image: "/images/projects/esports/thumbnail.webp",
+      link: "/projects/esports"
     },
     {
       title: "Computer Assembly",
       description: "Description",
+      image: "/images/projects/computer/thumbnail.webp",
+      link: "/projects/computer"
     },
   ];
 
@@ -70,16 +92,25 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
             {projects.map((project, index) => (
-              <MagicCard
-                key={index}
-                className="cursor-pointer p-6 min-h-[200px] bg-black"
-                gradientColor={"#262626"}
-              >
-                <div className="flex flex-col h-full justify-between">
-                  <h2 className="text-2xl font-lexend-bold">{project.title}</h2>
-                  <p className="text-gray-400 text-right self-end">{project.description}</p>
-                </div>
-              </MagicCard>
+              <Link href={project.link} key={index}>
+                <MagicCard
+                  className="cursor-pointer p-0 min-h-[300px] bg-black overflow-hidden group relative"
+                  gradientColor={"#262626"}
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-all duration-500 group-hover:opacity-20"
+                    />
+                    <div className="absolute inset-0 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-all duration-500">
+                      <h2 className="text-2xl font-lexend-bold text-white transform translate-x-[-20px] opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">{project.title}</h2>
+                      <p className="text-gray-400 text-right self-end transform translate-x-[20px] opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">{project.description}</p>
+                    </div>
+                  </div>
+                </MagicCard>
+              </Link>
             ))}
           </div>
         </main>
