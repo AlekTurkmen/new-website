@@ -13,6 +13,7 @@ export class Scene {
   private currentRotation: number = 0;
   private animationFrameId: number | null = null;
   private isAnimating: boolean = false;
+  private lastElapsedTime: number = 0;
 
   constructor(container: HTMLElement) {
     // Initialize core components
@@ -50,6 +51,9 @@ export class Scene {
         uFrequency: { value: 3.0 },
         uAmplitude: { value: 6.0 },
         uIntensity: { value: 7.0 },
+        uColor1: { value: new THREE.Color(0x000000) }, // black
+        uColor2: { value: new THREE.Color(0xff0000) }, // red
+        uColor3: { value: new THREE.Color(0xffffff) }, // white
       },
     });
 
@@ -58,6 +62,25 @@ export class Scene {
 
     this.bindEvents();
     this.startAnimation();
+  }
+
+  private getRandomColor(): THREE.Color {
+    return new THREE.Color(
+      Math.random(),
+      Math.random(),
+      Math.random()
+    );
+  }
+
+  public randomizeColors(): void {
+    if (this.mesh.material instanceof THREE.ShaderMaterial) {
+      this.mesh.material.uniforms.uColor1.value = this.getRandomColor();
+      this.mesh.material.uniforms.uColor2.value = this.getRandomColor();
+      this.mesh.material.uniforms.uColor3.value = this.getRandomColor();
+      
+      // Force a render even if animation is paused
+      this.renderer.render(this.scene, this.camera);
+    }
   }
 
   private bindEvents(): void {
@@ -87,7 +110,8 @@ export class Scene {
     this.controls.update();
     
     if (this.mesh.material instanceof THREE.ShaderMaterial) {
-      this.mesh.material.uniforms.uTime.value = this.clock.getElapsedTime();
+      this.lastElapsedTime = this.clock.getElapsedTime();
+      this.mesh.material.uniforms.uTime.value = this.lastElapsedTime;
     }
 
     this.currentRotation += (this.targetRotation - this.currentRotation) * 0.1;
@@ -108,6 +132,9 @@ export class Scene {
 
   public startAnimation(): void {
     if (!this.isAnimating) {
+      this.clock.start();
+      // Adjust the clock's start time to maintain continuity
+      this.clock.elapsedTime = this.lastElapsedTime;
       this.isAnimating = true;
       this.animate();
     }
@@ -119,5 +146,6 @@ export class Scene {
       cancelAnimationFrame(this.animationFrameId);
       this.animationFrameId = null;
     }
+    this.clock.stop();
   }
 }

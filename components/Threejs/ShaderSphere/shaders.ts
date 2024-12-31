@@ -134,6 +134,9 @@ export const fragmentShader = `
   
   uniform float uTime;
   uniform float uIntensity;
+  uniform vec3 uColor1;
+  uniform vec3 uColor2;
+  uniform vec3 uColor3;
   
   void main() {
     float distort = vDistort * uIntensity;
@@ -142,19 +145,14 @@ export const fragmentShader = `
     float t = distort * 2.0;
     float pattern = sin(t) + sin(t * 2.0);
     
-    // Define our three colors
-    vec3 black = vec3(0.0, 0.0, 0.0);
-    vec3 white = vec3(1.0, 1.0, 1.0);
-    vec3 red = vec3(1.0, 0.0, 0.0);
-    
-    // Create sharp transitions between colors
+    // Use the custom colors from uniforms
     vec3 color;
     if (pattern < -0.5) {
-        color = black;
+        color = uColor1;
     } else if (pattern < 0.5) {
-        color = red;
+        color = uColor2;
     } else {
-        color = white;
+        color = uColor3;
     }
     
     gl_FragColor = vec4(color, 1.0);

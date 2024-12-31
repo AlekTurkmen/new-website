@@ -1,12 +1,35 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from 'react';
 import { Scene } from './Scene';
 
-export default function ShaderSphere() {
+export interface ShaderSphereRef {
+  toggleAnimation: () => void;
+  randomizeColors: () => void;
+}
+
+const ShaderSphere = forwardRef<ShaderSphereRef>((_, ref) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<Scene | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useImperativeHandle(ref, () => ({
+    toggleAnimation: () => {
+      if (!sceneRef.current) return;
+      
+      if (isAnimating) {
+        sceneRef.current.stopAnimation();
+      } else {
+        sceneRef.current.startAnimation();
+      }
+      setIsAnimating(!isAnimating);
+    },
+    randomizeColors: () => {
+      if (!sceneRef.current) return;
+      sceneRef.current.randomizeColors();
+    }
+  }));
 
   useEffect(() => {
     if (!containerRef.current || sceneRef.current) return;
@@ -35,4 +58,7 @@ export default function ShaderSphere() {
       aria-hidden="true"
     />
   );
-}
+});
+
+ShaderSphere.displayName = 'ShaderSphere';
+export default ShaderSphere;
