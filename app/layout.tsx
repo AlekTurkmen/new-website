@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { AudioProvider } from '@/contexts/AudioContext'
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const pathPrefix = isDevelopment ? '' : '.';
@@ -59,7 +60,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${lexendRegular.variable} ${lexendBold.variable} font-sans antialiased`}>
       <body>
-        {children}
+        <AudioProvider>
+          {children}
+        </AudioProvider>
       </body>
     </html>
   );
