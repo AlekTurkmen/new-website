@@ -14,7 +14,7 @@ export default function Home() {
   const projects = [
     {
       title: "Queens Sculpture",
-      description: "NYC Parks sculpture unveiling Spring 2025.",
+      description: "NYC Parks sculpture unveiling Spring 2025",
       image: "/images/projects/queens/thumbnail.webp",
       link: "/projects/queens"
     },
@@ -26,49 +26,49 @@ export default function Home() {
     },
     {
       title: "Mechatronics Robot",
-      description: "Description",
-      image: "/images/projects/robot/thumbnail.webp",
+      description: "Sumo robot battles",
+      image: "/images/projects/robot/IMG_2345.webp",
       link: "/projects/robot"
     },
     {
       title: "LED Name Plate",
-      description: "Description",
-      image: "/images/projects/led/thumbnail.webp",
+      description: "I make birthday presents",
+      image: "/images/projects/led/IMG_2378.webp",
       link: "/projects/led"
     },
     {
       title: "Patio Retrofit",
-      description: "Description",
-      image: "/images/projects/patio/thumbnail.webp",
+      description: "Backyard renovations",
+      image: "/images/projects/patio/IMG_2914.webp",
       link: "/projects/patio"
     },
     {
       title: "Fashion Toolbox",
-      description: "Description",
+      description: "Acrylic fashion toolbox and showcase",
       image: "/images/projects/fashion/thumbnail.webp",
       link: "/projects/fashion"
     },
     {
       title: "Flag Frenzy",
-      description: "Description",
-      image: "/images/projects/flag/thumbnail.webp",
+      description: "A cryptic 6 player game",
+      image: "/images/projects/flag/pro-FF.webp",
       link: "/projects/flag"
     },
     {
       title: "Restoring 1989 BMW",
-      description: "Description",
-      image: "/images/projects/bmw/thumbnail.webp",
+      description: "E32 7 Series Flagship Sedan",
+      image: "/images/projects/bmw/pro-CR.webp",
       link: "/projects/bmw"
     },
     {
       title: "Retired Esports Pro",
-      description: "Description",
+      description: "I competed in esports tournaments in high school",
       image: "/images/projects/esports/thumbnail.webp",
       link: "/projects/esports"
     },
     {
       title: "Computer Assembly",
-      description: "Description",
+      description: "I started building computers when I was 12",
       image: "/images/projects/computer/thumbnail.webp",
       link: "/projects/computer"
     },
@@ -86,7 +86,6 @@ export default function Home() {
                 PROJECTS
               </h1>
             </div>
-            <p className="text-md text-gray-400">Page coming soon.</p>
             <div className="w-full h-[1px] bg-gray-800 mt-8"></div>
           </div>
           
