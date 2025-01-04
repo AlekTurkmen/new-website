@@ -41,7 +41,7 @@ export default function Home() {
             ALEK TURKMEN
           </h1>
         </main>
-        {/* Animation Control Button */}
+        {/* Animation Control Buttons */}
         <div className="flex gap-6">
           <AnimationControl ref={animationControlRef} shaderSphereRef={shaderSphereRef} />
         </div>
