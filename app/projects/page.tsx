@@ -51,7 +51,7 @@ export default function Home() {
     {
       title: "Flag Frenzy",
       description: "A cryptic 6 player game",
-      image: "/images/projects/flag/pro-FF.webp",
+      image: "/images/projects/flag/thumbnail.webp",
       link: "/projects/flag"
     },
     {
