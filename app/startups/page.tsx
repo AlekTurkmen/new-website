@@ -78,6 +78,7 @@ export default function Home() {
                         src={startup.image}
                         alt={startup.title}
                         fill
+                        priority={index < 2}
                         className="object-cover transition-all duration-500 group-hover:opacity-20"
                       />
                       <div className="absolute inset-0 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-all duration-500">
@@ -98,6 +99,7 @@ export default function Home() {
                         src={startup.image}
                         alt={startup.title}
                         fill
+                        priority={index < 2}
                         className="object-cover transition-all duration-500 group-hover:opacity-20"
                       />
                       <div className="absolute inset-0 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-all duration-500">
