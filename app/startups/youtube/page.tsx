@@ -202,11 +202,11 @@ export default function Home() {
                     data={activities}
                     blockSize={20}
                     blockMargin={4}
-                    fontSize={14}
+                    fontSize={16}
                     theme={customTheme}
                     showWeekdayLabels
                     labels={{
-                      totalCount: '{{count}} hours livestreamed since November 8th {{year}}'
+                      totalCount: '{{count}} hours livestreamed'
                     }}
                     renderBlock={(block: BlockElement, activity: CalendarActivityType) =>
                       React.cloneElement(block, {
@@ -219,9 +219,9 @@ export default function Home() {
                     id="activity-tooltip"
                     className="bg-white text-gray-800 border border-gray-200 shadow-lg"
                   />
-                  <div className="text-left text-sm mt-2 text-gray-300">
+                  {/* <div className="text-left text-sm mt-2 text-gray-300">
                     Streamed {calculateStreamPercentage(activities)}% of hours awake since November 8th 2024
-                  </div>
+                  </div> */}
                 </>
               )}
             </div>
