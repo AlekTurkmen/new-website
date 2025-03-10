@@ -93,7 +93,7 @@ export default function Home() {
               <div className="space-y-8 font-lexend-regular">
 
                 <p className='text-gray-300'>
-                  The Queens Sculpture is a project I've been working on for the past year. It's a 6ft tall sculpture that spells out the word "Queens". It's a symbol for the Queens community to show of their vibrant multiculturalism.
+                  The Queens Sculpture is a project I've been working on for the past year. It's a 6ft tall sculpture that spells out the word "Queens". It's a symbol for the Queens community to show off their vibrant multiculturalism.
                 </p>
 
                 <p className="text-gray-300">
