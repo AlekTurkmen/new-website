@@ -102,6 +102,8 @@ body {
   body {
     :root {
       --font-sans: var(--font-lexend-regular);
+      --font-bold: var(--font-lexend-bold);
+      --font-boldonse: var(--font-boldonse);
     }
     @apply bg-background text-foreground;
   }

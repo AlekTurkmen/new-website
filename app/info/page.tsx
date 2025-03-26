@@ -22,33 +22,33 @@ export default function Info() {
   const founder = [
     {
       title: "$100 / 10 Days Challenge",
-      image: "/images/startups/100-10/thumbnail.webp",
+      image: "/images/founder/100-10.webp",
       link: "https://www.notion.so/alekturkmen/100-10-Days-Alek-Turkmen-1360c1259cce80aa95ebd4dabd8c379f"
     },
     {
-      title: "YT Livestream Dashboard",
-      image: "/images/startups/youtube/thumbnail.webp",
-      link: "/founder/youtube"
+      title: "Luckily",
+      image: "/images/founder/luckily.webp",
+      link: "https://www.useluckily.com"
     },
     {
       title: "Project Nepo",
-      image: "/images/startups/nepo/thumbnail.webp",
+      image: "/images/founder/nepo.webp",
       link: "/founder/nepo"
     },
     {
       title: "Project Belvedere",
-      image: "/images/startups/belvedere/thumbnail.webp",
+      image: "/images/founder/belvedere.webp",
       link: "/founder/belvedere"
     },
     {
       title: "Sticky Chicken!",
-      image: "/images/startups/sticky/thumbnail.webp",
+      image: "/images/founder/sticky.webp",
       link: "/founder/sticky"
     },
     {
       title: "VY LUXURY",
-      image: "/images/startups/vy/logo.webp",
-      link: "/founder/vy"
+      image: "/images/founder/vy.webp",
+      link: "https://vy.luxury"
     }
   ];
 
@@ -87,53 +87,49 @@ export default function Info() {
   // Engineer section data (formerly Projects)
   const engineer = [
     {
+      title: "Parallel Distribution",
+      image: "/images/engineer/parallel.webp",
+      link: "https://paralleldistribution.com"
+    },
+    {
       title: "Queens Sculpture",
-      image: "/images/projects/queens/thumbnail.webp",
-      link: "/engineer/queens"
+      image: "/images/engineer/queens.webp",
+      link: "https://www.queens-nyc.com"
     },
     {
       title: "Heat Pump Rig",
-      image: "/images/projects/heatpump/thumbnail.webp",
+      image: "/images/engineer/heatpump/thumbnail.webp",
       link: "/engineer/heatpump"
     },
     {
-      title: "Mechatronics Robot",
-      image: "/images/projects/robot/IMG_2345.webp",
-      link: "/engineer/robot"
+      title: "Northrop Grumman",
+      image: "/images/engineer/NG.webp",
+      link: "https://www.northropgrumman.com/"
     },
     {
       title: "LED Name Plate",
-      image: "/images/projects/led/IMG_2378.webp",
+      image: "/images/engineer/led/IMG_2378.webp",
       link: "/engineer/led"
     },
     {
-      title: "Patio Retrofit",
-      image: "/images/projects/patio/IMG_2914.webp",
-      link: "/engineer/patio"
-    },
-    {
       title: "Fashion Toolbox",
-      image: "/images/projects/fashion/thumbnail.webp",
+      image: "/images/engineer/fashion/thumbnail.webp",
       link: "/engineer/fashion"
     },
-    {
-      title: "Flag Frenzy",
-      image: "/images/projects/flag/thumbnail.webp",
-      link: "/engineer/flag"
-    },
+
     {
       title: "Restoring 1989 BMW",
-      image: "/images/projects/bmw/pro-CR.webp",
+      image: "/images/engineer/bmw/pro-CR.webp",
       link: "/engineer/bmw"
     },
     {
-      title: "Retired Esports Pro",
-      image: "/images/projects/esports/thumbnail.webp",
-      link: "/engineer/esports"
+      title: "JBB",
+      image: "/images/engineer/jbb.webp",
+      link: "https://www.jbb.com/"
     },
     {
       title: "Computer Assembly",
-      image: "/images/projects/computer/thumbnail.webp",
+      image: "/images/engineer/computer.webp",
       link: "/engineer/computer"
     },
   ];

@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/Part Studio 1.webp"
+                      src="/images/engineer/led/Part Studio 1.webp"
                       alt="OnShape Prototype"
                       fill
                       className="object-contain bg-gray-900"
@@ -48,7 +48,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/Black Acrylic.webp"
+                      src="/images/engineer/led/Black Acrylic.webp"
                       alt="Black Acrylic"
                       fill
                       className="object-contain bg-gray-900"
@@ -63,7 +63,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/IMG_2365.webp"
+                      src="/images/engineer/led/IMG_2365.webp"
                       alt="Cardboard Prototype"
                       fill
                       className="object-cover"
@@ -71,7 +71,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/IMG_2370.webp"
+                      src="/images/engineer/led/IMG_2370.webp"
                       alt="Cardboard Prototype"
                       fill
                       className="object-cover"
@@ -94,7 +94,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/IMG_2367.webp"
+                      src="/images/engineer/led/IMG_2367.webp"
                       alt="Laser Cut Machine"
                       fill
                       className="object-cover"
@@ -102,7 +102,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/White Acrylic.webp"
+                      src="/images/engineer/led/White Acrylic.webp"
                       alt="White Acrylic 2D"
                       fill
                       className="object-contain bg-gray-900"
@@ -110,7 +110,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/Black Acrylic.webp"
+                      src="/images/engineer/led/Black Acrylic.webp"
                       alt="Black Acrylic 2D"
                       fill
                       className="object-contain bg-gray-900"
@@ -125,7 +125,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/IMG_2372.webp"
+                      src="/images/engineer/led/IMG_2372.webp"
                       alt="Soldering the LEDs"
                       fill
                       className="object-cover"
@@ -133,7 +133,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/IMG_2377.webp"
+                      src="/images/engineer/led/IMG_2377.webp"
                       alt="Final Assembly"
                       fill
                       className="object-cover"
@@ -144,7 +144,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/IMG_2378.webp"
+                      src="/images/engineer/led/IMG_2378.webp"
                       alt="LED Demo"
                       fill
                       className="object-cover"
@@ -152,7 +152,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/led/IMG_6285.webp"
+                      src="/images/engineer/led/IMG_6285.webp"
                       alt="Final Product"
                       fill
                       className="object-cover"

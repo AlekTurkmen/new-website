@@ -71,7 +71,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/1.webp"
+                      src="/images/writing/frat/1.webp"
                       alt="Frat poster 1"
                       fill
                       className="object-cover"
@@ -79,7 +79,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/2.webp"
+                      src="/images/writing/frat/2.webp"
                       alt="Frat poster 2"
                       fill
                       className="object-cover"
@@ -87,7 +87,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/3.webp"
+                      src="/images/writing/frat/3.webp"
                       alt="Frat poster 3"
                       fill
                       className="object-cover"
@@ -95,7 +95,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/4.webp"
+                      src="/images/writing/frat/4.webp"
                       alt="Frat poster 4"
                       fill
                       className="object-cover"
@@ -157,7 +157,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/a.webp"
+                      src="/images/writing/frat/a.webp"
                       alt="Frat poster design 1"
                       fill
                       className="object-cover"
@@ -165,7 +165,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/b.webp"
+                      src="/images/writing/frat/b.webp"
                       alt="Frat poster design 2"
                       fill
                       className="object-cover"
@@ -173,7 +173,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/c.webp"
+                      src="/images/writing/frat/c.webp"
                       alt="Frat poster design 3"
                       fill
                       className="object-cover"
@@ -181,7 +181,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/d.webp"
+                      src="/images/writing/frat/d.webp"
                       alt="Frat poster design 4"
                       fill
                       className="object-cover"
@@ -189,7 +189,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/e.gif"
+                      src="/images/writing/frat/e.gif"
                       alt="Frat poster design 5"
                       fill
                       className="object-cover"
@@ -197,7 +197,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/f.gif"
+                      src="/images/writing/frat/f.gif"
                       alt="Frat poster design 6"
                       fill
                       className="object-cover"
@@ -205,7 +205,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/g.webp"
+                      src="/images/writing/frat/g.webp"
                       alt="Frat poster design 7"
                       fill
                       className="object-cover"
@@ -213,7 +213,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/h.webp"
+                      src="/images/writing/frat/h.webp"
                       alt="Frat poster design 8"
                       fill
                       className="object-cover"
@@ -221,7 +221,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/frat/i.webp"
+                      src="/images/writing/frat/i.webp"
                       alt="Frat poster design 9"
                       fill
                       className="object-cover"

@@ -76,7 +76,7 @@ export default function Home() {
                 <div className="relative w-full max-w-3xl mx-auto">
                   <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/bmw/Seat Repair.webp"
+                      src="/images/engineer/bmw/Seat Repair.webp"
                       alt="Seat Repair"
                       fill
                       className="object-cover"
@@ -94,7 +94,7 @@ export default function Home() {
                 <div className="relative w-full max-w-3xl mx-auto">
                   <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/bmw/Seat Removal.webp"
+                      src="/images/engineer/bmw/Seat Removal.webp"
                       alt="Seat Removal"
                       fill
                       className="object-cover rotate-90"
@@ -124,7 +124,7 @@ export default function Home() {
                 <div className="relative w-full max-w-lg mx-auto">
                   <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/bmw/Battery Model.webp"
+                      src="/images/engineer/bmw/Battery Model.webp"
                       alt="Battery Model"
                       fill
                       className="object-contain"
@@ -142,7 +142,7 @@ export default function Home() {
                 <div className="relative w-full max-w-3xl mx-auto">
                   <div className="relative w-full aspect-[6/5] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/bmw/Open Battery.webp"
+                      src="/images/engineer/bmw/Open Battery.webp"
                       alt="Open Battery"
                       fill
                       className="object-cover"
@@ -176,7 +176,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/bmw/Fuse Box.webp"
+                      src="/images/engineer/bmw/Fuse Box.webp"
                       alt="Fuse Box"
                       fill
                       className="object-cover"
@@ -184,7 +184,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/bmw/Fuse Instructions.webp"
+                      src="/images/engineer/bmw/Fuse Instructions.webp"
                       alt="Fuse Instructions"
                       fill
                       className="object-cover"
@@ -192,7 +192,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/bmw/Hidden Cables.webp"
+                      src="/images/engineer/bmw/Hidden Cables.webp"
                       alt="Hidden Cables"
                       fill
                       className="object-cover"

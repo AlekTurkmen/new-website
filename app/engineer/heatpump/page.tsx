@@ -42,7 +42,7 @@ export default function Home() {
                 <h4 className="text-xl font-lexend-bold mt-8 mb-4">Level 1 - Overview</h4>
                 <div className="relative w-full aspect-[16/5] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/projects/heatpump/Level1.webp"
+                    src="/images/engineer/heatpump/Level1.webp"
                     alt="Level 1 Heat Pump Overview"
                     fill
                     className="object-contain bg-gray-900"
@@ -55,7 +55,7 @@ export default function Home() {
                 <h4 className="text-xl font-lexend-bold mt-8 mb-4">Level 2 - Overview</h4>
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/projects/heatpump/Level2.webp"
+                    src="/images/engineer/heatpump/Level2.webp"
                     alt="Level 2 Heat Pump Overview"
                     fill
                     className="object-contain bg-gray-900"
@@ -83,7 +83,7 @@ export default function Home() {
                 <h4 className="text-xl font-lexend-bold mt-8 mb-4">Level 3 - Overview</h4>
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/projects/heatpump/Level3.webp"
+                    src="/images/engineer/heatpump/Level3.webp"
                     alt="Level 3 Heat Pump Overview"
                     fill
                     className="object-contain bg-gray-900"
@@ -96,7 +96,7 @@ export default function Home() {
                 <h4 className="text-xl font-lexend-bold mt-8 mb-4">Level 4 - Stages</h4>
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/projects/heatpump/Level4.webp"
+                    src="/images/engineer/heatpump/Level4.webp"
                     alt="Level 4 Heat Pump Stages"
                     fill
                     className="object-contain bg-gray-900"
@@ -134,7 +134,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/12] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/heatpump/design rig.webp"
+                    src="/images/engineer/heatpump/design rig.webp"
                     alt="Early Design Rig"
                     fill
                     className="object-contain bg-gray-900"
@@ -144,7 +144,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/Level2.webp"
+                      src="/images/engineer/heatpump/Level2.webp"
                       alt="Refrigerant Schematic"
                       fill
                       className="object-contain bg-gray-900"
@@ -152,7 +152,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/screenshot2.webp"
+                      src="/images/engineer/heatpump/screenshot2.webp"
                       alt="Water Schematic"
                       fill
                       className="object-contain bg-gray-900"
@@ -167,7 +167,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/screenshot3.webp"
+                      src="/images/engineer/heatpump/screenshot3.webp"
                       alt="Physical Schematic"
                       fill
                       className="object-contain bg-gray-900"
@@ -175,7 +175,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/screenshot4.webp"
+                      src="/images/engineer/heatpump/screenshot4.webp"
                       alt="Sensor Schematic"
                       fill
                       className="object-contain bg-gray-900"
@@ -198,7 +198,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/7] rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/images/projects/heatpump/screenshot1.webp"
+                    src="/images/engineer/heatpump/screenshot1.webp"
                     alt="Ideal Vapor Compression Cycle Calculations"
                     fill
                     className="object-contain bg-gray-900"
@@ -277,7 +277,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/IMG_2267.gif"
+                      src="/images/engineer/heatpump/IMG_2267.gif"
                       alt="Water Loop"
                       fill
                       className="object-cover"
@@ -285,7 +285,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/IMG_2269.gif"
+                      src="/images/engineer/heatpump/IMG_2269.gif"
                       alt="Refrigerant Loop"
                       fill
                       className="object-cover"
@@ -296,7 +296,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/IMG_2264.webp"
+                      src="/images/engineer/heatpump/IMG_2264.webp"
                       alt="Water Loop"
                       fill
                       className="object-cover"
@@ -304,7 +304,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/heatpump/IMG_2270.webp"
+                      src="/images/engineer/heatpump/IMG_2270.webp"
                       alt="Refrigerant Loop"
                       fill
                       className="object-cover"
@@ -314,7 +314,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/heatpump/IMG_2290.webp"
+                    src="/images/engineer/heatpump/IMG_2290.webp"
                     alt="Testing for leaks"
                     fill
                     className="object-cover"
@@ -336,7 +336,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/heatpump/IMG_2290.webp"
+                    src="/images/engineer/heatpump/IMG_2290.webp"
                     alt="Final Rig"
                     fill
                     className="object-cover"
@@ -345,7 +345,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/heatpump/IMG_2322.webp"
+                    src="/images/engineer/heatpump/IMG_2322.webp"
                     alt="DAQ"
                     fill
                     className="object-cover"
@@ -369,7 +369,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/1] rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/images/projects/heatpump/screenshot5.webp"
+                    src="/images/engineer/heatpump/screenshot5.webp"
                     alt="R-134a Thermodynamic Properties Table (Saturated Vapor)"
                     fill
                     className="object-contain bg-gray-900"
@@ -389,7 +389,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/1] rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/images/projects/heatpump/screenshot6.webp"
+                    src="/images/engineer/heatpump/screenshot6.webp"
                     alt="R-134a Thermodynamic Properties Table (Superheated Vapor)"
                     fill
                     className="object-contain bg-gray-900"
@@ -413,7 +413,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/1] rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/images/projects/heatpump/screenshot7.webp"
+                    src="/images/engineer/heatpump/screenshot7.webp"
                     alt="R-134a Thermodynamic Properties Table (Saturated Liquid)"
                     fill
                     className="object-contain bg-gray-900"
@@ -433,7 +433,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/images/projects/heatpump/screenshot8.webp"
+                    src="/images/engineer/heatpump/screenshot8.webp"
                     alt="Final Calculations"
                     fill
                     className="object-contain bg-gray-900"

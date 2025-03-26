@@ -57,7 +57,7 @@ export default function Home() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="relative aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/images/blogs/personality/2024-1.webp"
+                        src="/images/writing/personality/2024-1.webp"
                         alt="2024 Personality Test Result 1"
                         fill
                         className="object-cover"
@@ -65,7 +65,7 @@ export default function Home() {
                     </div>
                     <div className="relative aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/images/blogs/personality/2024-2.webp"
+                        src="/images/writing/personality/2024-2.webp"
                         alt="2024 Personality Test Result 2"
                         fill
                         className="object-cover"
@@ -82,7 +82,7 @@ export default function Home() {
                   <p className="text-xl text-gray-300">Commander</p>
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/personality/2023.webp"
+                      src="/images/writing/personality/2023.webp"
                       alt="2023 Personality Test Result"
                       fill
                       className="object-cover"
@@ -98,7 +98,7 @@ export default function Home() {
                   <p className="text-xl text-gray-300">Entrepreneur</p>
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/personality/2021.webp"
+                      src="/images/writing/personality/2021.webp"
                       alt="2021 Personality Test Result"
                       fill
                       className="object-cover"
@@ -114,7 +114,7 @@ export default function Home() {
                   <p className="text-xl text-gray-300">Logician</p>
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/personality/2020.webp"
+                      src="/images/writing/personality/2020.webp"
                       alt="2020 Personality Test Result"
                       fill
                       className="object-cover"

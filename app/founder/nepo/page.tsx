@@ -133,7 +133,7 @@ Best,
                 <div className="space-y-4">
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/startups/nepo/1.webp"
+                      src="/images/founder/nepo/1.webp"
                       alt="Website Screenshot 1"
                       fill
                       className="object-cover"
@@ -141,7 +141,7 @@ Best,
                   </div>
                   <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/startups/nepo/2.webp"
+                      src="/images/founder/nepo/2.webp"
                       alt="Website Screenshot 2"
                       fill
                       className="object-cover"

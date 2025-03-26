@@ -117,6 +117,9 @@ export default {
   			],
   			bold: [
   				'var(--font-lexend-bold)'
+  			],
+  			boldonse: [
+  				'var(--font-boldonse)'
   			]
   		}
   	}

@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/1.gif"
+                      src="/images/writing/first-fail/1.gif"
                       alt="NHL Stick Breaking Example 1"
                       fill
                       className="object-cover"
@@ -60,7 +60,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/2.gif"
+                      src="/images/writing/first-fail/2.gif"
                       alt="NHL Stick Breaking Example 2"
                       fill
                       className="object-cover"
@@ -96,7 +96,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/3.webp"
+                      src="/images/writing/first-fail/3.webp"
                       alt="In-game stats display"
                       fill
                       className="object-cover"
@@ -104,7 +104,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/4.webp"
+                      src="/images/writing/first-fail/4.webp"
                       alt="Coaches and staff interface"
                       fill
                       className="object-cover"
@@ -136,7 +136,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/5.webp"
+                      src="/images/writing/first-fail/5.webp"
                       alt="FRF Graph"
                       fill
                       className="object-cover"
@@ -144,7 +144,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/6.gif"
+                      src="/images/writing/first-fail/6.gif"
                       alt="Impact hammer demonstration"
                       fill
                       className="object-cover"
@@ -188,7 +188,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/7.webp"
+                      src="/images/writing/first-fail/7.webp"
                       alt="Testing Clamp Rig"
                       fill
                       className="object-cover"
@@ -196,7 +196,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/blogs/first-fail/8.webp"
+                      src="/images/writing/first-fail/8.webp"
                       alt="Equipment Setup"
                       fill
                       className="object-cover"

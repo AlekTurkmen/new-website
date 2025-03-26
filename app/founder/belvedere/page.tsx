@@ -73,36 +73,36 @@ export default function Home() {
 
                 {/* Hormozi Concepts Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/startups/belvedere/Hormozileadgen2.webp"
-                      alt="Hormozi Lead Gen 2"
+                      src="/images/founder/belvedere/Hormozileadgen2.webp"
+                      alt="Hormozibot Screenshot"
                       fill
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </div>
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/startups/belvedere/Hormozioffergen2.webp"
-                      alt="Hormozi Offer Gen 2"
+                      src="/images/founder/belvedere/Hormozioffergen2.webp"
+                      alt="Hormozibot Screenshot"
                       fill
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </div>
-                  <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/startups/belvedere/Hormozileadgen.webp"
-                      alt="Hormozi Lead Gen"
+                      src="/images/founder/belvedere/Hormozileadgen.webp"
+                      alt="Hormozibot Screenshot"
                       fill
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </div>
-                  <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/startups/belvedere/Hormozioffergen.webp"
-                      alt="Hormozi Offer Gen"
+                      src="/images/founder/belvedere/Hormozioffergen.webp"
+                      alt="Hormozibot Screenshot"
                       fill
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -120,27 +120,27 @@ export default function Home() {
 
                 {/* Flyers Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-lexend-bold text-gray-200">Male</h4>
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/images/startups/belvedere/belvedere-male.webp"
-                        alt="Male/Logic Targeting Flyer"
+                        src="/images/founder/belvedere/belvedere-male.webp"
+                        alt="Belvedere Male"
                         fill
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </div>
-                    <p className="text-sm text-gray-400 text-center">Male/Logic Targeting Flyer</p>
                   </div>
-                  <div className="space-y-2">
-                    <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-lexend-bold text-gray-200">Female</h4>
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/images/startups/belvedere/belvedere-female.webp"
-                        alt="Female/Emotional Targeting Flyer"
+                        src="/images/founder/belvedere/belvedere-female.webp"
+                        alt="Belvedere Female"
                         fill
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </div>
-                    <p className="text-sm text-gray-400 text-center">Female/Emotional Targeting Flyer</p>
                   </div>
                 </div>
 

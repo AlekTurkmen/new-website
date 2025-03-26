@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/robot/IMG_2342.webp"
+                      src="/images/engineer/robot/IMG_2342.webp"
                       alt="Plowing Mechanism"
                       fill
                       className="object-cover"
@@ -60,7 +60,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/robot/IMG_2349.webp"
+                      src="/images/engineer/robot/IMG_2349.webp"
                       alt="Maximizing Torque"
                       fill
                       className="object-cover"
@@ -76,7 +76,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/robot/extraweight.webp"
+                      src="/images/engineer/robot/extraweight.webp"
                       alt="Low Center of Gravity"
                       fill
                       className="object-cover"
@@ -84,7 +84,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/robot/IMG_2346.webp"
+                      src="/images/engineer/robot/IMG_2346.webp"
                       alt="Opponent Capture System"
                       fill
                       className="object-cover"
@@ -112,7 +112,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/robot/circuit-diagram.webp"
+                      src="/images/engineer/robot/circuit-diagram.webp"
                       alt="Circuit Diagram"
                       fill
                       className="object-contain bg-gray-900"
@@ -120,7 +120,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/robot/circuit-programming.webp"
+                      src="/images/engineer/robot/circuit-programming.webp"
                       alt="Circuit Programming"
                       fill
                       className="object-contain bg-gray-900"
@@ -150,7 +150,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/robot/IMG_2351.gif"
+                    src="/images/engineer/robot/IMG_2351.gif"
                     alt="IR Sensor Wrong"
                     fill
                     className="object-cover"
@@ -161,7 +161,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/robot/video.gif"
+                    src="/images/engineer/robot/video.gif"
                     alt="IR Sensor Right"
                     fill
                     className="object-cover"
@@ -179,7 +179,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/robot/IMG_2223.webp"
+                    src="/images/engineer/robot/IMG_2223.webp"
                     alt="Honeycomb Design"
                     fill
                     className="object-cover"
@@ -196,7 +196,7 @@ export default function Home() {
 
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-8">
                   <Image
-                    src="/images/projects/robot/IMG_2286.webp"
+                    src="/images/engineer/robot/IMG_2286.webp"
                     alt="Gyroid Infill 15%"
                     fill
                     className="object-cover"

@@ -58,7 +58,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Slide1.webp"
+                      src="/images/engineer/fashion/Slide1.webp"
                       alt="Design Slide 1"
                       fill
                       className="object-cover"
@@ -66,7 +66,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid2.webp"
+                      src="/images/engineer/fashion/Grid2.webp"
                       alt="Grid Design 2"
                       fill
                       className="object-cover"
@@ -83,7 +83,7 @@ export default function Home() {
                 {/* CAD Image */}
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/projects/fashion/Toolbox CAD.webp"
+                    src="/images/engineer/fashion/Toolbox CAD.webp"
                     alt="Toolbox CAD Design"
                     fill
                     className="object-cover"
@@ -105,7 +105,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid1.webp"
+                      src="/images/engineer/fashion/Grid1.webp"
                       alt="Grid Design 1"
                       fill
                       className="object-cover"
@@ -113,7 +113,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid4.webp"
+                      src="/images/engineer/fashion/Grid4.webp"
                       alt="Grid Design 4"
                       fill
                       className="object-cover"
@@ -121,7 +121,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid5.webp"
+                      src="/images/engineer/fashion/Grid5.webp"
                       alt="Grid Design 5"
                       fill
                       className="object-cover"
@@ -133,7 +133,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid3.webp"
+                      src="/images/engineer/fashion/Grid3.webp"
                       alt="Grid Design 3"
                       fill
                       className="object-cover"
@@ -141,7 +141,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid6.webp"
+                      src="/images/engineer/fashion/Grid6.webp"
                       alt="Grid Design 6"
                       fill
                       className="object-cover"
@@ -163,7 +163,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Arduino-proto.webp"
+                      src="/images/engineer/fashion/Arduino-proto.webp"
                       alt="Arduino Prototype"
                       fill
                       className="object-cover"
@@ -171,7 +171,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Arduino-proto1.webp"
+                      src="/images/engineer/fashion/Arduino-proto1.webp"
                       alt="Arduino Prototype 1"
                       fill
                       className="object-cover"
@@ -179,7 +179,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Arduino-proto2.webp"
+                      src="/images/engineer/fashion/Arduino-proto2.webp"
                       alt="Arduino Prototype 2"
                       fill
                       className="object-cover"
@@ -199,7 +199,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid7.webp"
+                      src="/images/engineer/fashion/Grid7.webp"
                       alt="Assembly Grid 7"
                       fill
                       className="object-cover"
@@ -207,7 +207,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid8.webp"
+                      src="/images/engineer/fashion/Grid8.webp"
                       alt="Assembly Grid 8"
                       fill
                       className="object-cover"
@@ -215,7 +215,7 @@ export default function Home() {
                   </div>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/images/projects/fashion/Grid9.webp"
+                      src="/images/engineer/fashion/Grid9.webp"
                       alt="Assembly Grid 9"
                       fill
                       className="object-cover"
@@ -232,7 +232,7 @@ export default function Home() {
                 {/* Feature Photo */}
                 <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/projects/fashion/thumbnail.webp"
+                    src="/images/engineer/fashion/thumbnail.webp"
                     alt="Final Product Feature Photo"
                     fill
                     className="object-cover"

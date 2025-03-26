@@ -44,10 +44,10 @@ export default function Home() {
                   {/* Branding Section */}
                   <div className="space-y-4">
                     <h4 className="text-xl font-lexend-bold text-gray-200">Branding</h4>
-                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/images/startups/sticky/image2.webp"
-                        alt="Branding Example"
+                        src="/images/founder/sticky/image2.webp"
+                        alt="Sticky Chicken Gameplay"
                         fill
                         className="object-cover"
                       />
@@ -56,40 +56,32 @@ export default function Home() {
 
                   {/* LinkedIn/X Section */}
                   <div className="space-y-4">
-                    <h4 className="text-xl font-lexend-bold text-gray-200">LinkedIn/X (Text)</h4>
-                    <div className="relative aspect-[5/4] rounded-lg overflow-hidden">
-                      <Image
-                        src="/images/startups/sticky/41f89112-1c79-49c3-a64d-a933c5e11d00.webp"
-                        alt="LinkedIn/X Example"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Reels/TikTok Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-lexend-bold text-gray-200">Reels/TikTok (Short Form)</h4>
-                    <div className="relative aspect-[9/16] rounded-lg overflow-hidden">
-                      <Image
-                        src="/images/startups/sticky/51c0686f-8b15-4df2-a547-2923cb0bf21b.webp"
-                        alt="Reels/TikTok Example"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* YouTube Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-lexend-bold text-gray-200">YouTube/Internal (Long Form)</h4>
-                    <div className="relative aspect-[9/16] rounded-lg overflow-hidden">
-                      <Image
-                        src="/images/startups/sticky/7eedd81e-1551-4fd8-bd35-f1bfd8810a7e.webp"
-                        alt="YouTube Example"
-                        fill
-                        className="object-cover"
-                      />
+                    <h4 className="text-xl font-lexend-bold text-gray-200">White Glove Digital Marketing</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="relative aspect-square rounded-lg overflow-hidden">
+                        <Image
+                          src="/images/founder/sticky/41f89112-1c79-49c3-a64d-a933c5e11d00.webp"
+                          alt="Sticky Chicken Screenshot"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative aspect-square rounded-lg overflow-hidden">
+                        <Image
+                          src="/images/founder/sticky/51c0686f-8b15-4df2-a547-2923cb0bf21b.webp"
+                          alt="Sticky Chicken Screenshot"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative aspect-square rounded-lg overflow-hidden">
+                        <Image
+                          src="/images/founder/sticky/7eedd81e-1551-4fd8-bd35-f1bfd8810a7e.webp"
+                          alt="Sticky Chicken Screenshot"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -103,10 +95,10 @@ export default function Home() {
                   {/* Alek Section */}
                   <div className="space-y-4">
                     <h4 className="text-xl font-lexend-bold text-gray-200">Alek (Co-Founder)</h4>
-                    <div className="relative aspect-[9/16] rounded-lg overflow-hidden">
+                    <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/images/startups/sticky/image.webp"
-                        alt="Alek"
+                        src="/images/founder/sticky/image.webp"
+                        alt="Sticky Chicken Gameplay"
                         fill
                         className="object-cover"
                       />
@@ -120,7 +112,6 @@ export default function Home() {
                         <Link href="https://www.instagram.com/alekturkmen/" target="_blank" className="block text-purple-400 hover:text-purple-300">Instagram</Link>
                         <Link href="https://x.com/AlekTurkmen" target="_blank" className="block text-purple-400 hover:text-purple-300">X (Twitter)</Link>
                         <Link href="https://www.youtube.com/@alekturkmen" target="_blank" className="block text-purple-400 hover:text-purple-300">YouTube</Link>
-                        <Link href="https://www.alekturkmen.com/" target="_blank" className="block text-purple-400 hover:text-purple-300">Personal Website</Link>
                       </div>
                     </div>
                   </div>
@@ -128,10 +119,10 @@ export default function Home() {
                   {/* Gaudi Section */}
                   <div className="space-y-4">
                     <h4 className="text-xl font-lexend-bold text-gray-200">Gaudi (Co-Founder)</h4>
-                    <div className="relative aspect-[9/16] rounded-lg overflow-hidden">
+                    <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/images/startups/sticky/image 1.webp"
-                        alt="Gaudi"
+                        src="/images/founder/sticky/image 1.webp"
+                        alt="Sticky Chicken Store Page"
                         fill
                         className="object-cover"
                       />
@@ -158,9 +149,7 @@ export default function Home() {
                     They starting working together on homeworks and projects, then anything entrepreneurial outside of school. Cold calling, side hustles, and now startups.
                   </p>
                   <p className="text-gray-300 mt-4">
-                    Their previous venture was a startup called{' '}
-                    <Link href="/startups/vy" className="text-purple-400 hover:text-purple-300">VY Luxury</Link>
-                    , a consumer facing hyper personalized 3D printing eyewear startup. Their biggest problem with VY was not having an organic client acquisition strategy. Being the sharks that they are, they decided to scrap VY Luxury and pursue client acquistion through founder led organic social media content instead.
+                    Their previous venture was a startup called VY LUXURY, a consumer facing hyper personalized 3D printing eyewear startup. Their biggest problem with VY was not having an organic client acquisition strategy. Being the sharks that they are, they decided to scrap VY Luxury and pursue client acquistion through founder led organic social media content instead.
                   </p>
                 </div>
 
