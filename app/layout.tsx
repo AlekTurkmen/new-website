@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { AudioProvider } from '@/contexts/AudioContext'
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const pathPrefix = isDevelopment ? '' : '.';
 
 const lexendRegular = localFont({
-  src: './fonts/Lexend-Regular.ttf',
+  src: '../public/fonts/Lexend/static/Lexend-Regular.ttf',
   variable: '--font-lexend-regular',
   fallback: ['Comic Sans MS']
 })
 
 const lexendBold = localFont({
-  src: './fonts/Lexend-Bold.ttf',
+  src: '../public/fonts/Lexend/static/Lexend-Bold.ttf',
   variable: '--font-lexend-bold',
 })
 
@@ -60,9 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${lexendRegular.variable} ${lexendBold.variable} font-sans antialiased`}>
       <body>
-        <AudioProvider>
-          {children}
-        </AudioProvider>
+        {children}
       </body>
     </html>
   );
