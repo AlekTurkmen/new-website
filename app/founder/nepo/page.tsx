@@ -125,29 +125,6 @@ Best,
                   <li>Before I go into my next challenge, I want to create a website template and client acquisition template that I can use for every project I have after this</li>
                   <li>A startup can never have multiple end decision makers, there has to be just one</li>
                 </ul>
-
-                <div className="w-full h-[1px] bg-gray-800"></div>
-
-                <h3 className="text-2xl font-lexend-bold text-white">Website</h3>
-                {/* Stacked Images */}
-                <div className="space-y-4">
-                  <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/founder/nepo/1.webp"
-                      alt="Website Screenshot 1"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/founder/nepo/2.webp"
-                      alt="Website Screenshot 2"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
               </div>
             </main>
           </div>
