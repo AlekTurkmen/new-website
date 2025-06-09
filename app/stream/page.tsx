@@ -47,7 +47,7 @@ export default function Stream() {
 
   return (
     <div className={`${boldonse.variable} relative min-h-screen bg-black text-white font-lexend-regular flex items-center justify-center`}>
-      <div className="max-w-md mx-auto text-center space-y-8 px-4">
+      <div className="max-w-md mx-auto text-center space-y-4 px-4">
         {/* Day of building */}
         <div className="text-xl sm:text-2xl font-lexend-regular">
           Building A Startup Day {dayOfBuilding}
@@ -108,7 +108,7 @@ export default function Stream() {
           </div>
           
           {/* Digital time display */}
-          <div className="mt-4 text-2xl font-mono">
+          <div className="mt-2 text-2xl font-mono">
             {formatTimeEST(currentTime)} EST
           </div>
         </div>
