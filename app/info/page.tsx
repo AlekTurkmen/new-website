@@ -21,10 +21,6 @@ export default function Info() {
   // Founder section data (formerly Startups)
   const founder = [
     {
-      title: "$100 / 10 Days Challenge",
-      link: "https://www.notion.so/alekturkmen/100-10-Days-Alek-Turkmen-1360c1259cce80aa95ebd4dabd8c379f"
-    },
-    {
       title: "Youtube Livestreams",
       link: "/founder/youtube"
     },
@@ -41,11 +37,15 @@ export default function Info() {
       link: "https://www.notion.so/alekturkmen/1st-Attempt-Project-Belvedere-11-24-1360c1259cce8014b2c1db6d89874096"
     },
     {
+      title: "$100 / 10 Days Challenge",
+      link: "https://www.notion.so/alekturkmen/100-10-Days-Alek-Turkmen-1360c1259cce80aa95ebd4dabd8c379f"
+    },
+    {
       title: "Sticky Chicken!",
       link: "/founder/sticky"
     },
     {
-      title: "VY LUXURY",
+      title: "VY LUXURY (Acquired)",
       link: "https://vy.luxury"
     }
   ];

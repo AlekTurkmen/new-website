@@ -44,16 +44,16 @@ const VideoThumbnail: React.FC<VideoThumbnailProps> = ({ videoId }) => (
     href={`https://youtube.com/watch?v=${videoId}`}
     target="_blank"
     rel="noopener noreferrer"
-    className="relative block w-32 h-24 hover:transform hover:scale-105 transition-transform"
+    className="relative block w-full aspect-video hover:transform hover:scale-105 transition-transform"
   >
     <img
-      src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+      src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
       alt="Video thumbnail"
       className="w-full h-full object-cover rounded-md"
     />
     <div className="absolute inset-0 flex items-center justify-center">
-      <div className="bg-black bg-opacity-60 rounded-full w-8 h-8 flex items-center justify-center">
-        <span className="text-white text-lg">▶</span>
+      <div className="bg-black bg-opacity-60 rounded-full w-12 h-12 flex items-center justify-center">
+        <span className="text-white text-xl">▶</span>
       </div>
     </div>
   </a>
@@ -67,14 +67,14 @@ export default function Home() {
 
   const customTheme = {
     light: [
-      '#ffebe9',
+      'transparent',
       '#ffc1c0',
       '#ff9492',
       '#ff6b6b',
       '#ff0000'
     ],
     dark: [
-      '#ffebe9',
+      'transparent',
       '#ffc1c0',
       '#ff9492',
       '#ff6b6b',
@@ -105,6 +105,16 @@ export default function Home() {
       month: 'long',
       day: 'numeric',
       year: 'numeric',
+      timeZone: 'UTC'
+    });
+  };
+
+  const formatDateShort = (dateString: string): string => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      month: 'numeric',
+      day: 'numeric',
+      year: '2-digit',
       timeZone: 'UTC'
     });
   };
@@ -176,7 +186,7 @@ export default function Home() {
       <ScrollProgress className="top" />
       
       <div className="relative">
-        <main className="max-w-4xl mx-auto py-16 px-4">
+        <main className="max-w-7xl mx-auto py-16 px-4">
           {/* Title section */}
           <div className="text-center mb-12">
             <h1 className="text-5xl sm:text-6xl text-white font-lexend-bold mb-4">
@@ -229,19 +239,13 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {livestreams.map(stream => (
                 <div key={stream.video_id} className="bg-gray-900 shadow-md rounded-lg p-6">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h2 className="text-l font-semibold text-white">{stream.title}</h2>
-                      <p className="text-gray-400">
-                        Published: {stream.published_at.split('T')[0]}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="mt-4 flex justify-between items-center text-gray-300 space-x-4">
-                    <div>
-                      <strong>Duration:</strong> {formatDuration(stream.duration)}
-                    </div>
+                  <h2 className="text-l font-semibold text-white mb-4">{stream.title}</h2>
+                  <div className="mb-4">
                     <VideoThumbnail videoId={stream.video_id} />
+                  </div>
+                  <div className="flex justify-between items-center text-gray-400">
+                    <span>{formatDateShort(stream.published_at)}</span>
+                    <span>{formatDuration(stream.duration)}</span>
                   </div>
                 </div>
               ))}
