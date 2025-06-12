@@ -109,9 +109,15 @@ export default function Home() {
     });
   };
 
+  // Helper function to adjust timestamp by subtracting 14 hours
+  const adjustTimestampBy14Hours = (dateString: string): Date => {
+    const originalDate = new Date(dateString);
+    return new Date(originalDate.getTime() - (14 * 60 * 60 * 1000));
+  };
+
   const formatDateShort = (dateString: string): string => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
+    const adjustedDate = adjustTimestampBy14Hours(dateString);
+    return adjustedDate.toLocaleDateString('en-US', {
       month: 'numeric',
       day: 'numeric',
       year: '2-digit',
@@ -154,18 +160,37 @@ export default function Home() {
         let maxDuration = 0;
 
         data.forEach((stream: Livestream) => {
-          const date = stream.published_at.split('T')[0];
+          // Subtract 14 hours from the timestamp before extracting the date
+          const adjustedDate = adjustTimestampBy14Hours(stream.published_at);
+          const date = adjustedDate.toISOString().split('T')[0];
           const duration = parseDurationToSeconds(stream.duration);
           const existing = dateMap.get(date) || 0;
           dateMap.set(date, existing + duration);
           maxDuration = Math.max(maxDuration, existing + duration);
         });
 
-        const activities = Array.from(dateMap.entries()).map(([date, duration]) => ({
-          date,
-          count: Math.round(duration / 3600),
-          level: Math.min(4, Math.floor((duration / maxDuration) * 4))
-        }));
+        const activities = Array.from(dateMap.entries()).map(([date, duration]) => {
+          const hours = duration / 3600;
+          let level = 0;
+          
+          if (hours === 0) {
+            level = 0; // Transparent
+          } else if (hours > 0 && hours <= 2) {
+            level = 1; // >0-2 hours
+          } else if (hours > 2 && hours <= 5) {
+            level = 2; // 2-5 hours
+          } else if (hours > 5 && hours <= 8) {
+            level = 3; // 5-8 hours
+          } else {
+            level = 4; // 8+ hours
+          }
+          
+          return {
+            date,
+            count: Math.round(hours),
+            level
+          };
+        });
 
         setActivities(activities);
         setLivestreams(data.reverse());
