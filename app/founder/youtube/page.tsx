@@ -239,7 +239,7 @@ export default function Home() {
                     blockMargin={4}
                     fontSize={16}
                     theme={customTheme}
-                    showWeekdayLabels
+                    showWeekdayLabels={['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']}
                     labels={{
                       totalCount: '{{count}} hours livestreamed'
                     }}
