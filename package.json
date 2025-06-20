@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run build:promptdj && next build",
-    "build:promptdj": "cd components/promptdj && npm install && npm run build && cd ../.. && rm -rf public/promptdj && cp -r components/promptdj/dist public/promptdj",
+    "build:promptdj": "cd components/promptdj && npm install && npx vite build && cd ../.. && rm -rf public/promptdj && cp -r components/promptdj/dist public/promptdj",
     "start": "next start",
     "lint": "next lint"
   },
