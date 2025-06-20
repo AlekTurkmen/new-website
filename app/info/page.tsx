@@ -18,10 +18,10 @@ export default function Info() {
   const [isLinkFocused, setIsLinkFocused] = useState(false);
   const { theme } = useTheme();
 
-  // Founder section data (formerly Startups)
+  // Founder section data
   const founder = [
     {
-      title: "Youtube Livestreams",
+      title: "Livestreams",
       link: "/founder/youtube"
     },
     {
@@ -29,15 +29,7 @@ export default function Info() {
       link: "https://www.useluckily.com"
     },
     {
-      title: "Project Nepo",
-      link: "https://www.notion.so/alekturkmen/2nd-Attempt-Project-Nepo-12-24-14f0c1259cce800ca744ddb254ff747e"
-    },
-    {
-      title: "Project Belvedere",
-      link: "https://www.notion.so/alekturkmen/1st-Attempt-Project-Belvedere-11-24-1360c1259cce8014b2c1db6d89874096"
-    },
-    {
-      title: "$100 / 10 Days Challenge",
+      title: "$100 / 10 Days",
       link: "https://www.notion.so/alekturkmen/100-10-Days-Alek-Turkmen-1360c1259cce80aa95ebd4dabd8c379f"
     },
     {
@@ -50,15 +42,31 @@ export default function Info() {
     }
   ];
 
-  // Engineer section data (formerly Projects)
-  const engineer = [
+  // Projects section data
+  const projects = [
     {
-      title: "Parallel Distribution",
-      link: "https://paralleldistribution.com"
+      title: "Vibe Mixing",
+      link: "/projects/vibe-mixing"
+    },
+    {
+      title: "Entrepreneurmaxxing",
+      link: "https://entrepreneurmaxxing.com"
+    },
+    {
+      title: "SovereignTyper",
+      link: "https://sovereigntyper.com"
     },
     {
       title: "Queens Sculpture",
       link: "https://www.queens-nyc.com"
+    }
+  ];
+
+  // Engineer section data
+  const engineer = [
+    {
+      title: "Parallel Distribution",
+      link: "https://paralleldistribution.com"
     },
     {
       title: "Northrop Grumman",
@@ -71,14 +79,10 @@ export default function Info() {
     {
       title: "Restoring 1989 BMW",
       link: "/engineer/bmw"
-    },
-    {
-      title: "Heat Pump Rig",
-      link: "/engineer/heatpump"
     }
   ];
 
-    // Writing section data (formerly Blogs)
+    // Writing section data
     const writing = [
       {
         title: "For Parents",
@@ -119,94 +123,242 @@ export default function Info() {
             </h1>
           </div>
 
-          {/* FOUNDER SECTION (formerly STARTUPS) */}
-          <div className="mb-10">
-            <div className="mb-4">
-              <h2 className="text-xl font-lexend-bold text-white mb-2">
-                FOUNDER
-              </h2>
-              <div className="w-full h-[1px] bg-white mt-2"></div>
+          {/* MOBILE LAYOUT - FOUNDER AND PROJECTS STACKED */}
+          <div className="mb-10 md:hidden">
+            {/* FOUNDER SECTION */}
+            <div className="mb-10">
+              <div className="mb-4">
+                <h2 className="text-xl font-lexend-bold text-white mb-1">
+                  FOUNDER
+                </h2>
+                <div className="w-full h-[1px] bg-white"></div>
+              </div>
+              
+              <div className="ml-4">
+                {founder.map((item, index) => (
+                  <div key={`founder-item-${index}`} className="mb-2">
+                    {item.link.startsWith('http') ? (
+                      <a 
+                        href={item.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-white transition-colors duration-200 underline-dotted-gray"
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link 
+                        href={item.link} 
+                        className="text-white transition-colors duration-200 underline-dotted-gray"
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            <div className="ml-4">
-              {founder.map((item, index) => (
-                <div key={`founder-item-${index}`} className="mb-2">
-                  {item.link.startsWith('http') ? (
-                    <a 
-                      href={item.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-white hover:text-red-500 transition-colors duration-200 underline"
-                    >
-                      {item.title}
-                    </a>
-                  ) : (
-                    <Link 
-                      href={item.link} 
-                      className="text-white hover:text-red-500 transition-colors duration-200 underline"
-                    >
+
+            {/* PROJECTS SECTION */}
+            <div className="mb-10">
+              <div className="mb-4">
+                <h2 className="text-xl font-lexend-bold text-white mb-1">
+                  PROJECTS
+                </h2>
+                <div className="w-full h-[1px] bg-white"></div>
+              </div>
+
+              <div className="ml-4">
+                {projects.map((item, index) => (
+                  <div key={`projects-item-${index}`} className="mb-2">
+                    <Link href={item.link} className="text-white transition-colors duration-200 underline-dotted-gray">
                       {item.title}
                     </Link>
-                  )}
-                </div>
-              ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* ENGINEER SECTION (formerly PROJECTS) */}
-          <div className="mb-8">
-            <div className="mb-4">
-              <h2 className="text-xl font-lexend-bold text-white mb-2">
-                ENGINEER
-              </h2>
-              <div className="w-full h-[1px] bg-white mt-2"></div>
+          {/* DESKTOP LAYOUT - FOUNDER AND PROJECTS SIDE BY SIDE */}
+          <div className="mb-10 hidden md:block">
+            <div className="flex flex-row gap-8 mb-2">
+              <div className="flex-1">
+                <h2 className="text-xl font-lexend-bold text-white mb-1">
+                  FOUNDER
+                </h2>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-lexend-bold text-white mb-1 text-right">
+                  PROJECTS
+                </h2>
+              </div>
             </div>
+            <div className="w-full h-[1px] bg-white mb-4"></div>
             
-            <div className="ml-4">
-              {engineer.map((item, index) => (
-                <div key={`engineer-item-${index}`} className="mb-2">
-                  {item.link.startsWith('http') ? (
-                    <a 
-                      href={item.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-white hover:text-red-500 transition-colors duration-200 underline"
-                    >
-                      {item.title}
-                    </a>
-                  ) : (
-                    <Link 
-                      href={item.link} 
-                      className="text-white hover:text-red-500 transition-colors duration-200 underline"
-                    >
-                      {item.title}
-                    </Link>
-                  )}
+            <div className="flex flex-row gap-8">
+              {/* FOUNDER SECTION */}
+              <div className="flex-1">
+                <div>
+                  {founder.map((item, index) => (
+                    <div key={`founder-item-${index}`} className="mb-2">
+                      {item.link.startsWith('http') ? (
+                        <a 
+                          href={item.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-white transition-colors duration-200 underline-dotted-gray"
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        <Link 
+                          href={item.link} 
+                          className="text-white transition-colors duration-200 underline-dotted-gray"
+                        >
+                          {item.title}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* PROJECTS SECTION */}
+              <div className="flex-1">
+                <div>
+                  {projects.map((item, index) => (
+                    <div key={`projects-item-${index}`} className="mb-2 text-right">
+                      <Link href={item.link} className="text-white transition-colors duration-200 underline-dotted-gray">
+                        {item.title}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-                    {/* WRITING SECTION (formerly BLOGS) */}
-                    <div className="mb-10">
-            <div className="mb-4">
-              <h2 className="text-xl font-lexend-bold text-white mb-2">
-                WRITING
-              </h2>
-              <div className="w-full h-[1px] bg-white mt-2"></div>
+
+          {/* MOBILE LAYOUT - ENGINEER AND WRITING STACKED */}
+          <div className="mb-8 md:hidden">
+            {/* ENGINEER SECTION */}
+            <div className="mb-8">
+              <div className="mb-4">
+                <h2 className="text-xl font-lexend-bold text-white mb-1">
+                  ENGINEER
+                </h2>
+                <div className="w-full h-[1px] bg-white"></div>
+              </div>
+              
+              <div className="ml-4">
+                {engineer.map((item, index) => (
+                  <div key={`engineer-item-${index}`} className="mb-2">
+                    {item.link.startsWith('http') ? (
+                      <a 
+                        href={item.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-white transition-colors duration-200 underline-dotted-gray"
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link 
+                        href={item.link} 
+                        className="text-white transition-colors duration-200 underline-dotted-gray"
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="ml-4">
-              {writing.map((item, index) => (
-                <div key={index} className="mb-2">
-                  <Link 
-                    href={`/writing/${item.slug}`}
-                    className="text-white hover:text-red-500 transition-colors duration-200 underline"
-                  >
-                    {item.title}
-                  </Link>
+            {/* WRITING SECTION */}
+            <div className="mb-10">
+              <div className="mb-4">
+                <h2 className="text-xl font-lexend-bold text-white mb-1">
+                  WRITING
+                </h2>
+                <div className="w-full h-[1px] bg-white"></div>
+              </div>
+
+              <div className="ml-4">
+                {writing.map((item, index) => (
+                  <div key={index} className="mb-2">
+                    <Link 
+                      href={`/writing/${item.slug}`}
+                      className="text-white transition-colors duration-200 underline-dotted-gray"
+                    >
+                      {item.title}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* DESKTOP LAYOUT - ENGINEER AND WRITING SIDE BY SIDE */}
+          <div className="mb-8 hidden md:block">
+            <div className="flex flex-row gap-8 mb-2">
+              <div className="flex-1">
+                <h2 className="text-xl font-lexend-bold text-white mb-1">
+                  ENGINEER
+                </h2>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-lexend-bold text-white mb-1 text-right">
+                  WRITING
+                </h2>
+              </div>
+            </div>
+            <div className="w-full h-[1px] bg-white mb-4"></div>
+            
+            <div className="flex flex-row gap-8">
+              {/* ENGINEER SECTION */}
+              <div className="flex-1">
+                <div>
+                  {engineer.map((item, index) => (
+                    <div key={`engineer-item-${index}`} className="mb-2">
+                      {item.link.startsWith('http') ? (
+                        <a 
+                          href={item.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-white transition-colors duration-200 underline-dotted-gray"
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        <Link 
+                          href={item.link} 
+                          className="text-white transition-colors duration-200 underline-dotted-gray"
+                        >
+                          {item.title}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* WRITING SECTION */}
+              <div className="flex-1">
+                <div>
+                  {writing.map((item, index) => (
+                    <div key={index} className="mb-2 text-right">
+                      <Link 
+                        href={`/writing/${item.slug}`}
+                        className="text-white transition-colors duration-200 underline-dotted-gray"
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </main>

@@ -108,3 +108,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .underline-dotted-gray {
+    @apply underline decoration-dotted decoration-gray-400 hover:decoration-solid hover:decoration-red-500;
+  }
+}

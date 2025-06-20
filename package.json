@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:promptdj && next build",
+    "build:promptdj": "cd components/promptdj && npm run build && cd ../.. && rm -rf public/promptdj && cp -r components/promptdj/dist public/promptdj",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/genai": "^1.5.1",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
@@ -63,6 +65,7 @@
     "recharts": "^2.13.3",
     "sonner": "^1.7.0",
     "stripe": "^17.4.0",
+    "styled-jsx": "^5.1.7",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.170.0",
