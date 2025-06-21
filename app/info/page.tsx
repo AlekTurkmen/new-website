@@ -37,7 +37,7 @@ export default function Info() {
       link: "/founder/sticky"
     },
     {
-      title: "VY LUXURY (Acquired)",
+      title: "VY LUXURY",
       link: "https://vy.luxury"
     }
   ];
